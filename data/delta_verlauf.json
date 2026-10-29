@@ -1,5 +1,301 @@
 [
  {
+  "erstellt": "2026-10-29T19:48:35+00:00",
+  "gepruefte_quellen": [
+   "datenservice",
+   "ted"
+  ],
+  "eintraege": [
+   {
+    "quelle": "TED",
+    "id": "TED-453028-2026",
+    "titel": "Vergabeverfahren 2031 Niddertal",
+    "auftraggeber": "Rhein-Main-Verkehrsverbund GmbH",
+    "art": "Ausschreibung",
+    "verfahren": "cn-standard",
+    "nuts": [
+     "DE712",
+     "DE719",
+     "DE71E"
+    ],
+    "plz": [],
+    "orte": [
+     "Hofheim am Taunus"
+    ],
+    "region": "Frankfurt am Main, Main-Kinzig-Kreis, Wetteraukreis",
+    "prioritaet": 1,
+    "cpv": [
+     "60210000",
+     "60210000"
+    ],
+    "bereich": "Schiene",
+    "frist": "2027-02-12",
+    "frist_quelle": "TED",
+    "wert": null,
+    "lose": null,
+    "veroeffentlicht": "2026-07-02",
+    "link": "https://ted.europa.eu/de/notice/453028-2026/html",
+    "beschreibung": "",
+    "entfernung_km": 17,
+    "ort_genauigkeit": "Kreismitte (ungefähr)",
+    "frist_status": "offen",
+    "key": "c6a919773a676daf",
+    "quellen": [
+     "TED"
+    ],
+    "delta": "neu"
+   },
+   {
+    "quelle": "Datenservice",
+    "id": "DS-1cc2c449-c260-4c5c-8089-6635c65ef12d",
+    "titel": "Vorabbekanntmachung gemäß Artikel 7 Absatz 2 VO (EG) 1370/2007 zur beabsichtigten Vergabe des Linienbündels LGI X-Bus Mittelhessen Ost als Öffentlicher Dienstleistungsauftrag im Buspersonennahverkehr (BPNV) im Sinne der Verordnung (EG) 1370/2007 vom 23.10.2007",
+    "auftraggeber": "Rhein-Main-Verkehrsverbund GmbH",
+    "art": "Vorinformation",
+    "verfahren": "Competitive tendering (article 5(3) of Regulation 1370/2007) ",
+    "nuts": [
+     "DE725"
+    ],
+    "plz": [],
+    "orte": [],
+    "region": "Vogelsbergkreis",
+    "prioritaet": 1,
+    "cpv": [
+     "60112000"
+    ],
+    "frist": "",
+    "frist_quelle": "",
+    "wert": null,
+    "lose": 1,
+    "veroeffentlicht": "2026-08-12",
+    "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=1cc2c449-c260-4c5c-8089-6635c65ef12d",
+    "datenservice_api": "https://oeffentlichevergabe.de/api/notices/1cc2c449-c260-4c5c-8089-6635c65ef12d?format=ocds&noticeVersion=01",
+    "beschreibung": "siehe Ziffer 5.1",
+    "bereich": "Straße",
+    "entfernung_km": 58,
+    "ort_genauigkeit": "Kreismitte (ungefähr), Kreis reicht ggf. in den 50-km-Umkreis",
+    "frist_status": "unbekannt",
+    "key": "2e4db6e57d992950",
+    "quellen": [
+     "Datenservice",
+     "TED"
+    ],
+    "weitere_ids": [
+     "TED-557211-2026"
+    ],
+    "delta": "neu"
+   },
+   {
+    "quelle": "Datenservice",
+    "id": "DS-9f59b0a7-d4d2-4033-90f9-5886f81c7373",
+    "titel": "Wettbewerbliche Vergabe eines öffentlichen Dienstleistungsauftrags im Linien- und Linienbedarfsverkehr mit Kraftomnibussen und Kraftfahrzeugen im Verkehrsnetz West-Mitte-Feinerschließung",
+    "auftraggeber": "Kreis­verkehrs­gesellschaft Offenbach mbH",
+    "art": "Vorinformation",
+    "verfahren": "Competitive tendering (article 5(3) of Regulation 1370/2007) ",
+    "nuts": [
+     "DE71C"
+    ],
+    "plz": [],
+    "orte": [],
+    "region": "Kreis Offenbach",
+    "prioritaet": 2,
+    "cpv": [
+     "60112000",
+     "60140000"
+    ],
+    "frist": "",
+    "frist_quelle": "",
+    "wert": null,
+    "lose": 1,
+    "veroeffentlicht": "2026-10-03",
+    "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=9f59b0a7-d4d2-4033-90f9-5886f81c7373",
+    "datenservice_api": "https://oeffentlichevergabe.de/api/notices/9f59b0a7-d4d2-4033-90f9-5886f81c7373?format=ocds&noticeVersion=01",
+    "beschreibung": "Der Kreis Offenbach ist Aufgabenträger des ÖPNV § 8a Abs. 1 Satz 3 des Personenbeförderungsgesetztes (PBefG).\nDie Kreis­verkehrs­gesellschaft Offenbach mbH (kvgOF) ist vom Kreis beliehen nach § 7 Abs. 1 i.V.m. § 5 Abs. 4 HessÖPNVG und damit zuständige Behörde für die Vergabe öffentlicher Dienstleistungsaufträge im Zuständigkeitsbereich des Kreises (im Folgenden: „zuständige Behörde“).\n\nDie beabsichtigte Vergabe bezieht sich auf Personenverkehrsdienste des öffentlichen Personennahverkehrs (ÖPNV) i. S. v. § 8 PBefG und § 2 Abs. 1 HessÖPNVG. Der zu vergebende ÖDA umfasst die ergänzende Verkehrsle",
+    "bereich": "Straße",
+    "entfernung_km": 29,
+    "ort_genauigkeit": "Kreismitte (ungefähr)",
+    "frist_status": "unbekannt",
+    "key": "5dce4e8079e2823d",
+    "quellen": [
+     "Datenservice",
+     "TED"
+    ],
+    "weitere_ids": [
+     "TED-683586-2026"
+    ],
+    "delta": "neu"
+   },
+   {
+    "quelle": "Datenservice",
+    "id": "DS-6207e78a-51ec-4fb1-8205-d68829e4e8c2",
+    "titel": "Wettbewerbliche Vergabe eines öffentlichen Dienstleistungsauftrags der Main-Taunus-Verkehrsgesellschaft mbH über öffentliche Personenverkehrsdienste im fahrplanfreien Linienbedarfsverkehr (On-Demand-Verkehr) im Stadtgebiet der Stadt Kelkheim.",
+    "auftraggeber": "MTV Main-Taunus-Verkehrsgesellschaft mbH",
+    "art": "Vorinformation",
+    "verfahren": "Competitive tendering (article 5(3) of Regulation 1370/2007) ",
+    "nuts": [
+     "DE71A"
+    ],
+    "plz": [
+     "65779"
+    ],
+    "orte": [
+     "Kelkheim"
+    ],
+    "region": "Main-Taunus-Kreis",
+    "prioritaet": 2,
+    "cpv": [
+     "60112000",
+     "60140000"
+    ],
+    "frist": "",
+    "frist_quelle": "",
+    "wert": null,
+    "lose": 1,
+    "veroeffentlicht": "2026-10-11",
+    "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=6207e78a-51ec-4fb1-8205-d68829e4e8c2",
+    "datenservice_api": "https://oeffentlichevergabe.de/api/notices/6207e78a-51ec-4fb1-8205-d68829e4e8c2?format=ocds&noticeVersion=01",
+    "beschreibung": "Die MTV Main-Taunus-Verkehrsgesellschaft mbH ist zuständige Behörde für die Vergabe öffentlicher Dienstleistungsaufträge (ÖDA) über Personenverkehrsdienste mit Kraftfahrzeugen (§§ 6 Abs. 4, 5 Abs. 4 ÖPNVG Hessen i.V.m. § 8a Abs. 1 Satz 2 PBefG). \n\nDie zuständige Behörde beabsichtigt, einen öffentlichen Dienstleistungsauftrag (ÖDA) über öffentliche Personenverkehrsdienste im fahrplanfreien Linienbedarfsverkehr (On-Demand-Verkehr) wettbewerblich zu vergeben. \nDie beabsichtigte Vergabe bezieht sich auf Personenverkehrsdienste des öffentlichen Personennahverkehrs (ÖPNV) i. S. v. § 8 PBefG und § 2 ",
+    "bereich": "Straße",
+    "entfernung_km": 18,
+    "ort_genauigkeit": "PLZ des Leistungsorts",
+    "frist_status": "unbekannt",
+    "key": "86a54936e98de2f9",
+    "quellen": [
+     "Datenservice",
+     "TED"
+    ],
+    "weitere_ids": [
+     "TED-700466-2026"
+    ],
+    "delta": "neu"
+   },
+   {
+    "quelle": "Datenservice",
+    "id": "DS-e8f03424-f683-4729-be91-608edb7a5d98",
+    "titel": "On-Demand-Verkehrsleistungen im Landkreis Darmstadt-Dieburg",
+    "auftraggeber": "Darmstadt-Dieburger Nahverkehrsorganisation - DADINA -",
+    "art": "Vorinformation",
+    "verfahren": "Competitive tendering (article 5(3) of Regulation 1370/2007) ",
+    "nuts": [
+     "DE716"
+    ],
+    "plz": [],
+    "orte": [],
+    "region": "Darmstadt-Dieburg",
+    "prioritaet": 3,
+    "cpv": [
+     "60112000",
+     "60140000"
+    ],
+    "frist": "",
+    "frist_quelle": "",
+    "wert": null,
+    "lose": 1,
+    "veroeffentlicht": "2026-07-12",
+    "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=e8f03424-f683-4729-be91-608edb7a5d98",
+    "datenservice_api": "https://oeffentlichevergabe.de/api/notices/e8f03424-f683-4729-be91-608edb7a5d98?format=ocds&noticeVersion=01",
+    "beschreibung": "On-Demand-Verkehrsleistungen im Landkreis Darmstadt-Dieburg.\n\nAuftragsgegenstand ist die Erbringung von Fahrdienstleistungen in einem über Software gesteuerten und vertriebenen Sammelbeförderungsangebot im Landkreis Darmstadt-Dieburg als Bestandteil des öffentlichen Personennahverkehrs.\n\nGegenstand der On-Demand-Verkehrsleistungen (ODM) ist die entgeltliche geschäftsmäßige Beförderung von Personen mit Personenkraftwagen auf der Grundlage eines behördlich genehmigten Tarifs als Bestandteil des öffentlichen Personennahverkehrsangebots, wobei die gesamte betriebliche Steuerung, die Entgegennahme ",
+    "bereich": "Straße",
+    "entfernung_km": 47,
+    "ort_genauigkeit": "Kreismitte (ungefähr)",
+    "frist_status": "unbekannt",
+    "key": "0b828a33b5113b78",
+    "quellen": [
+     "Datenservice",
+     "TED"
+    ],
+    "weitere_ids": [
+     "TED-481264-2026"
+    ],
+    "delta": "neu"
+   },
+   {
+    "quelle": "Datenservice",
+    "id": "DS-8265cfa7-fb7c-47c2-8020-936b9719de5e",
+    "titel": "Direktvergabe eines öffentlichen Dienstleistungsauftrags über öffentliche Personenverkehrsdienste mit Kraftfahrzeugen in den Linienbündeln 8 und 9 im Main-Kinzig-Kreis",
+    "auftraggeber": "Kreisverkehrsgesellschaft Main-Kinzig mbH",
+    "art": "Vorinformation",
+    "verfahren": "Competitive tendering (article 5(3) of Regulation 1370/2007) ",
+    "nuts": [
+     "DE719"
+    ],
+    "plz": [],
+    "orte": [
+     "Main-Kinzig-Kreis"
+    ],
+    "region": "Main-Kinzig-Kreis",
+    "prioritaet": 3,
+    "cpv": [
+     "60112000"
+    ],
+    "frist": "",
+    "frist_quelle": "",
+    "wert": null,
+    "lose": 1,
+    "veroeffentlicht": "2026-08-25",
+    "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=8265cfa7-fb7c-47c2-8020-936b9719de5e",
+    "datenservice_api": "https://oeffentlichevergabe.de/api/notices/8265cfa7-fb7c-47c2-8020-936b9719de5e?format=ocds&noticeVersion=01",
+    "beschreibung": "Der Main-Kinzig-Kreis ist nach § 5 Abs. 1 des Gesetzes über den öffentlichen Personennahverkehr in Hessen (ÖPNVG) Aufgabenträger für den öffentlichen Personennahverkehr (ÖPNV). Als Aufgabenträger ist der Kreis gemäß § 5 Abs. 4 ÖPNVG zugleich zuständige Behörde im Sinne der Verordnung (EG) Nr. 1370/2007 und als solche befugt, öffentliche Dienstleistungsauftrage zu vergeben und allgemeine Vorschriften aufzustellen.\nDer Kreis hat von der Möglichkeit nach § 6 Abs. 1 Satz 1 ÖPNVG Gebrauch gemacht und seine Befugnisse einschließlich der Zuständigkeit nach § 5 Abs. 4 ÖPNVG durch Beleihung auf die Kre",
+    "bereich": "Straße",
+    "entfernung_km": 41,
+    "ort_genauigkeit": "Kreismitte (ungefähr)",
+    "frist_status": "unbekannt",
+    "key": "303bbcf6e66f3d76",
+    "quellen": [
+     "Datenservice",
+     "TED"
+    ],
+    "weitere_ids": [
+     "TED-585123-2026"
+    ],
+    "delta": "neu"
+   },
+   {
+    "quelle": "Datenservice",
+    "id": "DS-c0e349e4-77b2-4d90-a4f7-e51461900933",
+    "titel": "Direktvergabe eines öffentlichen Dienstleistungsauftrags der Wissenschaftsstadt Darmstadt an die HEAG mobilo GmbH zur Erbringung von On-Demand-Verkehrsleistungen",
+    "auftraggeber": "Wissenschaftsstadt Darmstadt",
+    "art": "Vorinformation",
+    "verfahren": "Competitive tendering (article 5(3) of Regulation 1370/2007) ",
+    "nuts": [
+     "DE711"
+    ],
+    "plz": [
+     "64283"
+    ],
+    "orte": [
+     "Darmstadt"
+    ],
+    "region": "Darmstadt",
+    "prioritaet": 3,
+    "cpv": [
+     "60112000",
+     "60140000"
+    ],
+    "frist": "",
+    "frist_quelle": "",
+    "wert": null,
+    "lose": 1,
+    "veroeffentlicht": "2026-10-01",
+    "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=c0e349e4-77b2-4d90-a4f7-e51461900933",
+    "datenservice_api": "https://oeffentlichevergabe.de/api/notices/c0e349e4-77b2-4d90-a4f7-e51461900933?format=ocds&noticeVersion=01",
+    "beschreibung": "Die Wissenschaftsstadt Darmstadt beabsichtigt als zuständige Behörde (§ 5 Abs.1 Satz 1. und Abs. 4 ÖPNVG Hessen i.V.m. § 8a Abs. 1 Satz 2 PBefG), einen öffentlichen Dienstleistungsauftrag (ÖDA) über öffentliche Personenverkehrsdienste mit Kraftfahrzeugen an die HEAG Mobilo GmbH (HEAG Mobilo) (Betreiber) direkt zu vergeben.\n\nDie beabsichtigte Vergabe bezieht sich auf Personenverkehrsdienste des öffentlichen Personennahverkehrs (ÖPNV) i. S. v. § 8 PBefG und § 2 Abs. 1 ÖPNVG Hessen. Gegenstand der beabsichtigten Vergabe sind sämtliche gegenwärtige und künftige On-Demand-Verkehrsdienste (ODM), auf",
+    "bereich": "Straße",
+    "entfernung_km": 44,
+    "ort_genauigkeit": "PLZ des Leistungsorts",
+    "frist_status": "unbekannt",
+    "key": "80a1afa14c5ab851",
+    "quellen": [
+     "Datenservice",
+     "TED"
+    ],
+    "weitere_ids": [
+     "TED-677565-2026"
+    ],
+    "delta": "neu"
+   }
+  ]
+ },
+ {
   "erstellt": "2026-10-29T19:26:41+00:00",
   "gepruefte_quellen": [
    "datenservice",

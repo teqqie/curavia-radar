@@ -1,5 +1,5 @@
 {
- "erstellt": "2026-10-29T19:26:41+00:00",
+ "erstellt": "2026-10-29T19:48:35+00:00",
  "gueltig": true,
  "gepruefte_quellen": [
   "datenservice",
@@ -7,215 +7,289 @@
  ],
  "eintraege": [
   {
-   "quelle": "Datenservice",
-   "id": "DS-25954592",
-   "titel": "Schienenersatzverkehr (SEV) für vom 02.11.2026 bis 22.11.2026 zwischen den Haltestellen Friedensbrücke - Oberforsthaus und Haardtwaldplatz",
-   "auftraggeber": "Stadtwerke Verkehrsgesellschaft Frankfurt am Main mbH (VGF)",
+   "quelle": "TED",
+   "id": "TED-453028-2026",
+   "titel": "Vergabeverfahren 2031 Niddertal",
+   "auftraggeber": "Rhein-Main-Verkehrsverbund GmbH",
    "art": "Ausschreibung",
-   "verfahren": "Public announcement",
+   "verfahren": "cn-standard",
    "nuts": [
-    "DE7"
+    "DE712",
+    "DE719",
+    "DE71E"
    ],
-   "plz": [
-    "60311"
-   ],
+   "plz": [],
    "orte": [
-    "60311 Frankfurt am Main"
+    "Hofheim am Taunus"
    ],
-   "region": "Hessen",
-   "prioritaet": 2,
+   "region": "Frankfurt am Main, Main-Kinzig-Kreis, Wetteraukreis",
+   "prioritaet": 1,
    "cpv": [
-    "60170000"
+    "60210000",
+    "60210000"
    ],
-   "frist": "2026-10-26",
-   "frist_quelle": "eForms (Angebotsfrist)",
+   "bereich": "Schiene",
+   "frist": "2027-02-12",
+   "frist_quelle": "TED",
    "wert": null,
-   "lose": 1,
-   "veroeffentlicht": "2026-10-21",
-   "link": "https://bieterzugang.deutsche-evergabe.de/evergabe.bieter/api/supplier/external/deeplink/subproject/a073216d-2e63-4172-a3f5-40f6dadf3c15",
-   "datenservice_api": "https://oeffentlichevergabe.de/api/notices/25954592?format=ocds&noticeVersion=1",
-   "beschreibung": "SEV für Linien 15/21 wegen Gleiserneuerung\n\nSchienenersatzverkehr zwischen den Haltestellen Friedensbrücke - Oberforsthaus und Haardtwaldplatz\n\n\nSEV 1\nLinie 15 zw. Friedensbrücke und Haardtwaldplatz:\nStart: Montag 02.11.2026 Betriebsbeginn \nEnde: Samstag 21.11.2026 Betriebsende\n\nSEV 2\nLinie 21 zw. Friedensbrücke und Oberforsthaus:\nStart: 02.11.2026 Betriebsbeginn\nEnde: 21.11.2026 ca. 14:00 Uhr\n\nSchienenersatzverkehr (SEV) für vom 02.11.2026 bis 22.11.2026 zwischen den Haltestellen Friedensbrücke - Oberforsthaus und Haardtwaldplatz",
-   "key": "4144f658244d4d70",
+   "lose": null,
+   "veroeffentlicht": "2026-07-02",
+   "link": "https://ted.europa.eu/de/notice/453028-2026/html",
+   "beschreibung": "",
+   "entfernung_km": 17,
+   "ort_genauigkeit": "Kreismitte (ungefähr)",
+   "frist_status": "offen",
+   "key": "c6a919773a676daf",
    "quellen": [
-    "Datenservice"
+    "TED"
    ],
    "delta": "neu"
   },
   {
    "quelle": "Datenservice",
-   "id": "DS-25978004",
-   "titel": "Schienenersatzverkehr (SEV) für vom 21.11.2026 bis 22.11.2026 zwischen den Haltestellen Konstablerwache und Preungesheim",
-   "auftraggeber": "Stadtwerke Verkehrsgesellschaft Frankfurt am Main mbH (VGF)",
-   "art": "Ausschreibung",
-   "verfahren": "Public announcement",
+   "id": "DS-1cc2c449-c260-4c5c-8089-6635c65ef12d",
+   "titel": "Vorabbekanntmachung gemäß Artikel 7 Absatz 2 VO (EG) 1370/2007 zur beabsichtigten Vergabe des Linienbündels LGI X-Bus Mittelhessen Ost als Öffentlicher Dienstleistungsauftrag im Buspersonennahverkehr (BPNV) im Sinne der Verordnung (EG) 1370/2007 vom 23.10.2007",
+   "auftraggeber": "Rhein-Main-Verkehrsverbund GmbH",
+   "art": "Vorinformation",
+   "verfahren": "Competitive tendering (article 5(3) of Regulation 1370/2007) ",
    "nuts": [
-    "DE7"
+    "DE725"
    ],
-   "plz": [
-    "60311"
-   ],
-   "orte": [
-    "60311 Frankfurt am Main"
-   ],
-   "region": "Hessen",
-   "prioritaet": 2,
+   "plz": [],
+   "orte": [],
+   "region": "Vogelsbergkreis",
+   "prioritaet": 1,
    "cpv": [
-    "60170000"
+    "60112000"
    ],
-   "frist": "2026-11-06",
-   "frist_quelle": "eForms (Angebotsfrist)",
+   "frist": "",
+   "frist_quelle": "",
    "wert": null,
    "lose": 1,
-   "veroeffentlicht": "2026-10-28",
-   "link": "https://bieterzugang.deutsche-evergabe.de/evergabe.bieter/api/supplier/external/deeplink/subproject/fab334b3-cbd8-4938-b7e3-12d31af800af",
-   "datenservice_api": "https://oeffentlichevergabe.de/api/notices/25978004?format=ocds&noticeVersion=1",
-   "beschreibung": "SEV für Linie U5\n\nSchienenersatzverkehr zwischen den Haltestellen Konstablerwache und Preungesheim\n\n\nBetriebsbeginn: Samstag 21.11.2026 \nBetriebsende: Sonntag 22.11.2026\n\nSchienenersatzverkehr (SEV) für vom 21.11.2026 bis 22.11.2026 zwischen den Haltestellen Konstablerwache und Preungesheim",
-   "key": "0cceb741c3aee906",
+   "veroeffentlicht": "2026-08-12",
+   "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=1cc2c449-c260-4c5c-8089-6635c65ef12d",
+   "datenservice_api": "https://oeffentlichevergabe.de/api/notices/1cc2c449-c260-4c5c-8089-6635c65ef12d?format=ocds&noticeVersion=01",
+   "beschreibung": "siehe Ziffer 5.1",
+   "bereich": "Straße",
+   "entfernung_km": 58,
+   "ort_genauigkeit": "Kreismitte (ungefähr), Kreis reicht ggf. in den 50-km-Umkreis",
+   "frist_status": "unbekannt",
+   "key": "2e4db6e57d992950",
    "quellen": [
-    "Datenservice"
+    "Datenservice",
+    "TED"
+   ],
+   "weitere_ids": [
+    "TED-557211-2026"
    ],
    "delta": "neu"
   },
   {
    "quelle": "Datenservice",
-   "id": "DS-e58596d9-a4ca-496b-9f12-6545fa43e011",
-   "titel": "Linienbündel Miltenberg Süd, Zusammenarbeit mit AMINA",
-   "auftraggeber": "Landratsamt Miltenberg",
-   "art": "Ausschreibung",
-   "verfahren": "Open",
+   "id": "DS-9f59b0a7-d4d2-4033-90f9-5886f81c7373",
+   "titel": "Wettbewerbliche Vergabe eines öffentlichen Dienstleistungsauftrags im Linien- und Linienbedarfsverkehr mit Kraftomnibussen und Kraftfahrzeugen im Verkehrsnetz West-Mitte-Feinerschließung",
+   "auftraggeber": "Kreis­verkehrs­gesellschaft Offenbach mbH",
+   "art": "Vorinformation",
+   "verfahren": "Competitive tendering (article 5(3) of Regulation 1370/2007) ",
    "nuts": [
-    "DE269"
+    "DE71C"
+   ],
+   "plz": [],
+   "orte": [],
+   "region": "Kreis Offenbach",
+   "prioritaet": 2,
+   "cpv": [
+    "60112000",
+    "60140000"
+   ],
+   "frist": "",
+   "frist_quelle": "",
+   "wert": null,
+   "lose": 1,
+   "veroeffentlicht": "2026-10-03",
+   "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=9f59b0a7-d4d2-4033-90f9-5886f81c7373",
+   "datenservice_api": "https://oeffentlichevergabe.de/api/notices/9f59b0a7-d4d2-4033-90f9-5886f81c7373?format=ocds&noticeVersion=01",
+   "beschreibung": "Der Kreis Offenbach ist Aufgabenträger des ÖPNV § 8a Abs. 1 Satz 3 des Personenbeförderungsgesetztes (PBefG).\nDie Kreis­verkehrs­gesellschaft Offenbach mbH (kvgOF) ist vom Kreis beliehen nach § 7 Abs. 1 i.V.m. § 5 Abs. 4 HessÖPNVG und damit zuständige Behörde für die Vergabe öffentlicher Dienstleistungsaufträge im Zuständigkeitsbereich des Kreises (im Folgenden: „zuständige Behörde“).\n\nDie beabsichtigte Vergabe bezieht sich auf Personenverkehrsdienste des öffentlichen Personennahverkehrs (ÖPNV) i. S. v. § 8 PBefG und § 2 Abs. 1 HessÖPNVG. Der zu vergebende ÖDA umfasst die ergänzende Verkehrsle",
+   "bereich": "Straße",
+   "entfernung_km": 29,
+   "ort_genauigkeit": "Kreismitte (ungefähr)",
+   "frist_status": "unbekannt",
+   "key": "5dce4e8079e2823d",
+   "quellen": [
+    "Datenservice",
+    "TED"
+   ],
+   "weitere_ids": [
+    "TED-683586-2026"
+   ],
+   "delta": "neu"
+  },
+  {
+   "quelle": "Datenservice",
+   "id": "DS-6207e78a-51ec-4fb1-8205-d68829e4e8c2",
+   "titel": "Wettbewerbliche Vergabe eines öffentlichen Dienstleistungsauftrags der Main-Taunus-Verkehrsgesellschaft mbH über öffentliche Personenverkehrsdienste im fahrplanfreien Linienbedarfsverkehr (On-Demand-Verkehr) im Stadtgebiet der Stadt Kelkheim.",
+   "auftraggeber": "MTV Main-Taunus-Verkehrsgesellschaft mbH",
+   "art": "Vorinformation",
+   "verfahren": "Competitive tendering (article 5(3) of Regulation 1370/2007) ",
+   "nuts": [
+    "DE71A"
    ],
    "plz": [
-    "63897"
+    "65779"
    ],
    "orte": [
-    "Miltenberg"
+    "Kelkheim"
    ],
-   "region": "DE269",
+   "region": "Main-Taunus-Kreis",
+   "prioritaet": 2,
+   "cpv": [
+    "60112000",
+    "60140000"
+   ],
+   "frist": "",
+   "frist_quelle": "",
+   "wert": null,
+   "lose": 1,
+   "veroeffentlicht": "2026-10-11",
+   "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=6207e78a-51ec-4fb1-8205-d68829e4e8c2",
+   "datenservice_api": "https://oeffentlichevergabe.de/api/notices/6207e78a-51ec-4fb1-8205-d68829e4e8c2?format=ocds&noticeVersion=01",
+   "beschreibung": "Die MTV Main-Taunus-Verkehrsgesellschaft mbH ist zuständige Behörde für die Vergabe öffentlicher Dienstleistungsaufträge (ÖDA) über Personenverkehrsdienste mit Kraftfahrzeugen (§§ 6 Abs. 4, 5 Abs. 4 ÖPNVG Hessen i.V.m. § 8a Abs. 1 Satz 2 PBefG). \n\nDie zuständige Behörde beabsichtigt, einen öffentlichen Dienstleistungsauftrag (ÖDA) über öffentliche Personenverkehrsdienste im fahrplanfreien Linienbedarfsverkehr (On-Demand-Verkehr) wettbewerblich zu vergeben. \nDie beabsichtigte Vergabe bezieht sich auf Personenverkehrsdienste des öffentlichen Personennahverkehrs (ÖPNV) i. S. v. § 8 PBefG und § 2 ",
+   "bereich": "Straße",
+   "entfernung_km": 18,
+   "ort_genauigkeit": "PLZ des Leistungsorts",
+   "frist_status": "unbekannt",
+   "key": "86a54936e98de2f9",
+   "quellen": [
+    "Datenservice",
+    "TED"
+   ],
+   "weitere_ids": [
+    "TED-700466-2026"
+   ],
+   "delta": "neu"
+  },
+  {
+   "quelle": "Datenservice",
+   "id": "DS-e8f03424-f683-4729-be91-608edb7a5d98",
+   "titel": "On-Demand-Verkehrsleistungen im Landkreis Darmstadt-Dieburg",
+   "auftraggeber": "Darmstadt-Dieburger Nahverkehrsorganisation - DADINA -",
+   "art": "Vorinformation",
+   "verfahren": "Competitive tendering (article 5(3) of Regulation 1370/2007) ",
+   "nuts": [
+    "DE716"
+   ],
+   "plz": [],
+   "orte": [],
+   "region": "Darmstadt-Dieburg",
    "prioritaet": 3,
    "cpv": [
     "60112000",
     "60140000"
    ],
-   "frist": "2026-10-27",
-   "frist_quelle": "eForms (Angebotsfrist)",
+   "frist": "",
+   "frist_quelle": "",
    "wert": null,
    "lose": 1,
-   "veroeffentlicht": "2026-10-18",
-   "link": "https://plattform.aumass.de/Veroeffentlichung/av269774-eu",
-   "datenservice_api": "https://oeffentlichevergabe.de/api/notices/e58596d9-a4ca-496b-9f12-6545fa43e011?format=ocds&noticeVersion=01",
-   "beschreibung": "Vergabe öffentlicher Personenverkehrsleistungen im Linienverkehr mit Kraftfahrzeugen und im On Demand-Verkehr im Linienbündel „Miltenberg-Süd“",
-   "key": "4d3948e96c7dd922",
-   "quellen": [
-    "Datenservice"
-   ],
-   "delta": "neu"
-  },
-  {
-   "quelle": "Datenservice",
-   "id": "DS-216b9688-3acb-4093-a286-b98e70df3faa",
-   "titel": "Linienbündel „Bad Schwalbach / Aar“ (Los 1), Linienbündel „Rheingau-Ost“\n(Los 2), Linienbündel „Taunusstein“ (Los 3)",
-   "auftraggeber": "Rheingau-Taunus-Verkehrsgesellschaft mbH",
-   "art": "Ausschreibung",
-   "verfahren": "Open",
-   "nuts": [
-    "DE71D"
-   ],
-   "plz": [],
-   "orte": [],
-   "region": "Rheingau-Taunus-Kreis",
-   "prioritaet": 3,
-   "cpv": [
-    "60112000"
-   ],
-   "frist": "2026-12-07",
-   "frist_quelle": "eForms (Angebotsfrist)",
-   "wert": null,
-   "lose": 3,
-   "veroeffentlicht": "2026-10-25",
-   "link": "https://www.subreport.de/E77957963",
-   "datenservice_api": "https://oeffentlichevergabe.de/api/notices/216b9688-3acb-4093-a286-b98e70df3faa?format=ocds&noticeVersion=01",
-   "beschreibung": "Öffentliche Nahverkehrsleistungen auf dem Gebiet des Rheingau-Taunus-Kreises und der Stadt Wiesbaden.",
-   "key": "5a492be3d9c54d4d",
+   "veroeffentlicht": "2026-07-12",
+   "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=e8f03424-f683-4729-be91-608edb7a5d98",
+   "datenservice_api": "https://oeffentlichevergabe.de/api/notices/e8f03424-f683-4729-be91-608edb7a5d98?format=ocds&noticeVersion=01",
+   "beschreibung": "On-Demand-Verkehrsleistungen im Landkreis Darmstadt-Dieburg.\n\nAuftragsgegenstand ist die Erbringung von Fahrdienstleistungen in einem über Software gesteuerten und vertriebenen Sammelbeförderungsangebot im Landkreis Darmstadt-Dieburg als Bestandteil des öffentlichen Personennahverkehrs.\n\nGegenstand der On-Demand-Verkehrsleistungen (ODM) ist die entgeltliche geschäftsmäßige Beförderung von Personen mit Personenkraftwagen auf der Grundlage eines behördlich genehmigten Tarifs als Bestandteil des öffentlichen Personennahverkehrsangebots, wobei die gesamte betriebliche Steuerung, die Entgegennahme ",
+   "bereich": "Straße",
+   "entfernung_km": 47,
+   "ort_genauigkeit": "Kreismitte (ungefähr)",
+   "frist_status": "unbekannt",
+   "key": "0b828a33b5113b78",
    "quellen": [
     "Datenservice",
     "TED"
    ],
    "weitere_ids": [
-    "TED-742840-2026"
+    "TED-481264-2026"
    ],
    "delta": "neu"
   },
   {
    "quelle": "Datenservice",
-   "id": "DS-f91d82aa-258a-4bdc-8808-f36a9e4be9ae",
-   "titel": "Vergabe eines öffentlichen Dienstleistungsauftrages über Verkehrsleistungen im öffentlichen Straßenpersonennahverkehr im Gebiet des Landkreises Aschaffenburg und der kreisfreien Stadt Aschaffenburg gemäß Art. 5 Abs. 2 Satz 1 Verordnung (EG) Nr. 1370/2007 (VO 1370) an einen internen Betreiber",
-   "auftraggeber": "Landkreis Aschaffenburg",
+   "id": "DS-8265cfa7-fb7c-47c2-8020-936b9719de5e",
+   "titel": "Direktvergabe eines öffentlichen Dienstleistungsauftrags über öffentliche Personenverkehrsdienste mit Kraftfahrzeugen in den Linienbündeln 8 und 9 im Main-Kinzig-Kreis",
+   "auftraggeber": "Kreisverkehrsgesellschaft Main-Kinzig mbH",
    "art": "Vorinformation",
-   "verfahren": "Negotiated without prior call for competition",
+   "verfahren": "Competitive tendering (article 5(3) of Regulation 1370/2007) ",
    "nuts": [
-    "DE264"
+    "DE719"
+   ],
+   "plz": [],
+   "orte": [
+    "Main-Kinzig-Kreis"
+   ],
+   "region": "Main-Kinzig-Kreis",
+   "prioritaet": 3,
+   "cpv": [
+    "60112000"
+   ],
+   "frist": "",
+   "frist_quelle": "",
+   "wert": null,
+   "lose": 1,
+   "veroeffentlicht": "2026-08-25",
+   "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=8265cfa7-fb7c-47c2-8020-936b9719de5e",
+   "datenservice_api": "https://oeffentlichevergabe.de/api/notices/8265cfa7-fb7c-47c2-8020-936b9719de5e?format=ocds&noticeVersion=01",
+   "beschreibung": "Der Main-Kinzig-Kreis ist nach § 5 Abs. 1 des Gesetzes über den öffentlichen Personennahverkehr in Hessen (ÖPNVG) Aufgabenträger für den öffentlichen Personennahverkehr (ÖPNV). Als Aufgabenträger ist der Kreis gemäß § 5 Abs. 4 ÖPNVG zugleich zuständige Behörde im Sinne der Verordnung (EG) Nr. 1370/2007 und als solche befugt, öffentliche Dienstleistungsauftrage zu vergeben und allgemeine Vorschriften aufzustellen.\nDer Kreis hat von der Möglichkeit nach § 6 Abs. 1 Satz 1 ÖPNVG Gebrauch gemacht und seine Befugnisse einschließlich der Zuständigkeit nach § 5 Abs. 4 ÖPNVG durch Beleihung auf die Kre",
+   "bereich": "Straße",
+   "entfernung_km": 41,
+   "ort_genauigkeit": "Kreismitte (ungefähr)",
+   "frist_status": "unbekannt",
+   "key": "303bbcf6e66f3d76",
+   "quellen": [
+    "Datenservice",
+    "TED"
+   ],
+   "weitere_ids": [
+    "TED-585123-2026"
+   ],
+   "delta": "neu"
+  },
+  {
+   "quelle": "Datenservice",
+   "id": "DS-c0e349e4-77b2-4d90-a4f7-e51461900933",
+   "titel": "Direktvergabe eines öffentlichen Dienstleistungsauftrags der Wissenschaftsstadt Darmstadt an die HEAG mobilo GmbH zur Erbringung von On-Demand-Verkehrsleistungen",
+   "auftraggeber": "Wissenschaftsstadt Darmstadt",
+   "art": "Vorinformation",
+   "verfahren": "Competitive tendering (article 5(3) of Regulation 1370/2007) ",
+   "nuts": [
+    "DE711"
    ],
    "plz": [
-    "63739"
+    "64283"
    ],
    "orte": [
-    "Aschaffenburg"
+    "Darmstadt"
    ],
-   "region": "Landkreis Aschaffenburg",
+   "region": "Darmstadt",
    "prioritaet": 3,
    "cpv": [
-    "60112000"
+    "60112000",
+    "60140000"
    ],
    "frist": "",
    "frist_quelle": "",
    "wert": null,
    "lose": 1,
-   "veroeffentlicht": "2026-10-20",
-   "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=f91d82aa-258a-4bdc-8808-f36a9e4be9ae",
-   "datenservice_api": "https://oeffentlichevergabe.de/api/notices/f91d82aa-258a-4bdc-8808-f36a9e4be9ae?format=ocds&noticeVersion=01",
-   "beschreibung": "Der Landkreis Aschaffenburg ist gemäß Art. 8 Abs. 1 Gesetz über den öffentlichen Personennahverkehr in Bayern (BayÖPNVG) Aufgabenträger für den ÖPNV und damit gemäß Art. 8 Abs. 3 BayÖPNVG zuständige Behörde für die Vereinbarung oder Auferlegung gemeinwirtschaftlicher Verkehrsleistungen i. S. v. Art. 2 lit. b und VO 1370. Er ist zudem von der Stadt Aschaffenburg, die ihrerseits gemäß Art. 8 Abs. 1 BayÖPNVG Aufgabenträgerin für den ÖPNV und damit gemäß Art. 8 Abs. 3 BayÖPNVG zuständige Behörde für die Vereinbarung oder Auferlegung gemeinwirtschaftlicher Verkehrsleistungen i. S. v. Art. 2 lit. b ",
-   "key": "0830a72bd2e6198d",
+   "veroeffentlicht": "2026-10-01",
+   "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=c0e349e4-77b2-4d90-a4f7-e51461900933",
+   "datenservice_api": "https://oeffentlichevergabe.de/api/notices/c0e349e4-77b2-4d90-a4f7-e51461900933?format=ocds&noticeVersion=01",
+   "beschreibung": "Die Wissenschaftsstadt Darmstadt beabsichtigt als zuständige Behörde (§ 5 Abs.1 Satz 1. und Abs. 4 ÖPNVG Hessen i.V.m. § 8a Abs. 1 Satz 2 PBefG), einen öffentlichen Dienstleistungsauftrag (ÖDA) über öffentliche Personenverkehrsdienste mit Kraftfahrzeugen an die HEAG Mobilo GmbH (HEAG Mobilo) (Betreiber) direkt zu vergeben.\n\nDie beabsichtigte Vergabe bezieht sich auf Personenverkehrsdienste des öffentlichen Personennahverkehrs (ÖPNV) i. S. v. § 8 PBefG und § 2 Abs. 1 ÖPNVG Hessen. Gegenstand der beabsichtigten Vergabe sind sämtliche gegenwärtige und künftige On-Demand-Verkehrsdienste (ODM), auf",
+   "bereich": "Straße",
+   "entfernung_km": 44,
+   "ort_genauigkeit": "PLZ des Leistungsorts",
+   "frist_status": "unbekannt",
+   "key": "80a1afa14c5ab851",
    "quellen": [
     "Datenservice",
     "TED"
    ],
    "weitere_ids": [
-    "TED-722954-2026"
-   ],
-   "delta": "neu"
-  },
-  {
-   "quelle": "TED",
-   "id": "TED-750414-2026",
-   "titel": "Öffentlicher Dienstleistungsauftrag im Schienenpersonennahverkehr im Sinne des Art. 5 Abs. 1 der Verordnung (EG) 1370/2007 vom 23.10.2007: Kahlgrund 2031+",
-   "auftraggeber": "Bayerische Eisenbahngesellschaft mbH (BEG)",
-   "art": "Vorinformation",
-   "verfahren": "pin-only",
-   "nuts": [
-    "DE264"
-   ],
-   "plz": [],
-   "orte": [
-    "München"
-   ],
-   "region": "Landkreis Aschaffenburg",
-   "prioritaet": 3,
-   "cpv": [
-    "60210000",
-    "60210000"
-   ],
-   "frist": "",
-   "frist_quelle": "",
-   "wert": null,
-   "lose": null,
-   "veroeffentlicht": "2026-10-29",
-   "link": "https://ted.europa.eu/de/notice/750414-2026/html",
-   "beschreibung": "",
-   "key": "c00873394693ba2a",
-   "quellen": [
-    "TED"
+    "TED-677565-2026"
    ],
    "delta": "neu"
   }
