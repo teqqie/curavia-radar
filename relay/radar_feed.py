@@ -7,7 +7,14 @@ import datetime as dt, hashlib, io, json, os, re, sys, time, urllib.request, url
 import xml.etree.ElementTree as ET
 
 DATA = os.environ.get("RADAR_DATA", "data")
-UA = "CuraVia-Radar/1.1 (GitHub Actions; taeglicher Abruf offener Vergabedaten)"
+UA = "CuraVia-Radar/1.2 (GitHub Actions; taeglicher Abruf offener Vergabedaten)"
+BACKFILL_DAYS = int(os.environ.get("NACHERFASSEN_TAGE") or 0)  # einmalige Nacherfassung (manueller Start)
+HOME = (50.260667, 8.6276263)  # 61381 Friedrichsdorf
+PLZ_GEO_URL = "https://raw.githubusercontent.com/WZBSocialScienceCenter/plz_geocoord/master/plz_geocoord.csv"
+# PLZ der Prioritaet-1-Kreise (Hochtaunuskreis, Wetteraukreis)
+P1_PLZ = {"61348", "61350", "61352", "61381", "61389", "61440", "61449", "61462", "61476", "61479", "61250", "61267",
+          "61273", "61276", "61279", "61118", "61169", "61184", "61191", "61194", "61197", "61200", "61203", "61206",
+          "61209", "61231", "61239", "63654", "63667", "63683", "63688", "63691", "63695", "63697", "63699", "35510", "35516"}
 TODAY = dt.date.today()
 MAX_CATCHUP_DAYS = 10
 FIRST_RUN_DAYS = 14
@@ -21,13 +28,16 @@ KW = re.compile(r"bef(ö|oe)rder|fahrdienst|krankenfahrt|sch(ü|ue)ler(verkehr|s
 EXCLUDE = re.compile(r"\bpost|brief|umzug|spedition|schnee|kunst|luftverkehr|g(ü|ue)ter|abfall|m(ü|ue)ll|"
                      r"fahrradverleih|mietfahrr|carsharing|leasing|lieferung von", re.I)
 
-NUTS_PRIO = {
-    "DE718": 1, "DE71E": 1,  # Hochtaunuskreis, Wetteraukreis
-    "DE712": 2, "DE71A": 2, "DE713": 2, "DE71C": 2, "DE719": 2, "DE721": 2, "DE723": 2, "DE722": 2, "DE725": 2,
-    "DE714": 3, "DE71D": 3, "DE711": 3, "DE716": 3, "DE717": 3, "DE724": 3, "DEB35": 3, "DEB3J": 3,
-    "DE261": 3, "DE264": 3, "DEB1B": 3,
-    "DE7": 3, "DE71": 3, "DE72": 3,  # nur grob angegeben: Leistungsort pruefen
+# ungefaehre Kreismitte (fuer Bekanntmachungen ohne PLZ des Leistungsorts)
+NUTS_CENTER = {
+    "DE718": (50.30, 8.55), "DE71E": (50.35, 8.90), "DE712": (50.11, 8.68), "DE71A": (50.08, 8.45), "DE713": (50.10, 8.77),
+    "DE71C": (50.02, 8.80), "DE719": (50.20, 9.20), "DE721": (50.55, 8.75), "DE723": (50.43, 8.20), "DE722": (50.60, 8.35),
+    "DE725": (50.60, 9.25), "DE714": (50.08, 8.24), "DE71D": (50.12, 8.05), "DE711": (49.87, 8.65), "DE716": (49.85, 8.80),
+    "DE717": (49.92, 8.45), "DE724": (50.80, 8.70), "DEB35": (49.99, 8.25), "DEB3J": (49.92, 8.05), "DE261": (49.97, 9.15),
+    "DE264": (50.00, 9.20), "DEB1B": (50.28, 7.85), "DE269": (49.75, 9.25),
 }
+NUTS_COARSE = {"DE7", "DE71", "DE72", "DE73", "DEU"}
+NUTS_PRIO = {**{k: 3 for k in NUTS_CENTER}, **{k: 3 for k in NUTS_COARSE if k != "DEU"}}  # Vorfilter fuer TED
 NUTS_NAME = {"DE718": "Hochtaunuskreis", "DE71E": "Wetteraukreis", "DE712": "Frankfurt am Main", "DE71A": "Main-Taunus-Kreis",
              "DE713": "Offenbach (Stadt)", "DE71C": "Kreis Offenbach", "DE719": "Main-Kinzig-Kreis", "DE721": "Landkreis Gießen",
              "DE723": "Limburg-Weilburg", "DE722": "Lahn-Dill-Kreis", "DE725": "Vogelsbergkreis", "DE714": "Wiesbaden",
@@ -36,22 +46,74 @@ NUTS_NAME = {"DE718": "Hochtaunuskreis", "DE71E": "Wetteraukreis", "DE712": "Fra
              "DE264": "Landkreis Aschaffenburg", "DEB1B": "Rhein-Lahn-Kreis", "DE7": "Hessen", "DE71": "Südhessen", "DE72": "Mittelhessen"}
 
 
-def plz_prio(p):
-    p = (p or "").strip()
-    if not re.fullmatch(r"\d{5}", p):
-        return None
-    if p[:2] == "61":
-        return 1 if p[:3] in ("613", "611", "612", "614") else 2
-    if p[:2] in ("60", "65", "63", "35"):
-        return 2 if p[:3] in ("603", "604", "605", "606", "657", "658", "631", "630", "632", "634", "353", "354", "355", "357") else 3
-    if p[:2] in ("64", "55"):
-        return 3
-    return None
+RAIL = re.compile(r"schienenpersonen|\bspnv\b|s-bahn|eisenbahn|schienenverkehr|zugverkehr|regionalbahn|"
+                  r"schienentransport|schienenbef(ö|oe)rder|triebwagen", re.I)
 
 
-def priority(regions, plzs):
-    pr = [NUTS_PRIO[r] for r in regions if r in NUTS_PRIO] + [x for x in (plz_prio(p) for p in plzs) if x]
-    return min(pr) if pr else None
+def is_rail(cpvs, text):
+    if re.search(r"schienenersatz", text or "", re.I):
+        return False  # SEV wird mit Bussen gefahren -> Strasse
+    return any(str(c).startswith(("6020", "6021", "6022", "6023")) for c in cpvs) or bool(RAIL.search(text or ""))
+
+
+def in_area(regions, plzs):
+    """grober Vorfilter; die genaue Entfernung prueft locate()"""
+    return any(r in NUTS_CENTER or r in NUTS_COARSE for r in regions) or \
+        any(re.fullmatch(r"(35|55|56|6[0-5])\d{3}", p or "") for p in plzs)
+
+
+_GEO = None
+
+
+def plz_geo():
+    global _GEO
+    if _GEO is None:
+        _GEO = {}
+        try:
+            code, body = http(PLZ_GEO_URL, tries=3, timeout=60)
+            if code == 200:
+                for line in body.decode("utf-8").splitlines()[1:]:
+                    p = line.split(",")
+                    if len(p) == 3:
+                        _GEO[p[0]] = (float(p[1]), float(p[2]))
+        except Exception:
+            pass
+    return _GEO
+
+
+def km(a, b):
+    import math
+    la1, lo1, la2, lo2 = map(math.radians, (*a, *b))
+    h = math.sin((la2 - la1) / 2) ** 2 + math.cos(la1) * math.cos(la2) * math.sin((lo2 - lo1) / 2) ** 2
+    return 6371 * 2 * math.asin(math.sqrt(h))
+
+
+def locate(e, buyer_plz=None):
+    """Setzt entfernung_km (Luftlinie ab 61381 Friedrichsdorf), ort_genauigkeit und prioritaet.
+    Gibt False zurueck, wenn der Leistungsort sicher ausserhalb von 50 km liegt."""
+    geo = plz_geo()
+    plzs = [p for p in e.get("plz", []) if p]
+    dists = [km(HOME, geo[p]) for p in plzs if p in geo]
+    exact = [r for r in e.get("nuts", []) if r in NUTS_CENTER]
+    if dists:
+        d, acc = min(dists), "PLZ des Leistungsorts"
+    elif exact:
+        d, acc = min(km(HOME, NUTS_CENTER[r]) for r in exact), "Kreismitte (ungefähr)"
+    elif buyer_plz and buyer_plz in geo:
+        d, acc = km(HOME, geo[buyer_plz]), "nur Adresse des Auftraggebers – Leistungsort prüfen"
+    else:
+        d, acc = None, "Leistungsort unklar – prüfen"
+    p1 = any(p in P1_PLZ for p in plzs) or any(r in ("DE718", "DE71E") for r in exact)
+    if d is not None and d > 50 and not p1:
+        # Kreismitte ist ungenau: grosse Kreise am Rand bis 60 km zulassen
+        if acc.startswith("Kreismitte") and d <= 60:
+            acc += ", Kreis reicht ggf. in den 50-km-Umkreis"
+        else:
+            return False
+    e["entfernung_km"] = round(d) if d is not None else None
+    e["ort_genauigkeit"] = acc
+    e["prioritaet"] = 1 if p1 else (2 if d is not None and d <= 30 else 3)
+    return True
 
 
 def relevant(cpvs, text):
@@ -136,11 +198,13 @@ def ocds_entries(zbytes, day):
                 # PLZ steckt manchmal in locality ("61169 Friedberg")
                 plzs += [m for l in locs for m in re.findall(r"\b\d{5}\b", l or "")]
                 buyer = rel.get("buyer") or {}
-                if not regions and not plzs:
-                    plzs = [((buyer.get("address") or {}).get("postalCode") or "")]
-                pr = priority(regions, plzs)
-                if pr is None:
-                    continue
+                # Sind weder PLZ noch NUTS-Code des Leistungsorts vorhanden, darf
+                # die PLZ des Auftraggebers als unsicherer Ersatz verwendet werden.
+                # Nicht durch den zweiten Vorfilter erneut aussortieren!
+                buyer_plz = ((buyer.get("address") or {}).get("postalCode") or "")
+                if not in_area(regions, plzs):
+                    if regions or plzs or not in_area([], [buyer_plz]):
+                        continue
                 ends = sorted({x for x in [(t.get("tenderPeriod") or {}).get("endDate")] +
                                [(l.get("tenderPeriod") or {}).get("endDate") for l in lots] if x})
                 val = (t.get("value") or {}).get("amount")
@@ -154,13 +218,15 @@ def ocds_entries(zbytes, day):
                     "art": kind, "verfahren": t.get("procurementMethodDetails") or t.get("procurementMethod"),
                     "nuts": regions, "plz": sorted(set(p for p in plzs if p)), "orte": locs,
                     "region": ", ".join(NUTS_NAME.get(r, r) for r in regions) or ", ".join(locs),
-                    "prioritaet": pr, "cpv": cpvs[:6], "frist": ends[0][:10] if ends else "",
+                    "prioritaet": None, "cpv": cpvs[:6], "frist": ends[0][:10] if ends else "",
                     "frist_quelle": "OCDS" if ends else "", "wert": val or (sum(lvals) if lvals else None),
                     "lose": len(lots), "veroeffentlicht": day,
                     "link": next((d.get("url") for d in (t.get("documents") or []) if d.get("url")), None)
                             or f"https://oeffentlichevergabe.de/ui/de/search/details?noticeId={nid}",
                     "datenservice_api": f"https://oeffentlichevergabe.de/api/notices/{m.group(1)}?format=ocds&noticeVersion={m.group(2)}" if m else uri,
                     "beschreibung": (t.get("description") or "")[:600],
+                    "_buyer_plz": (buyer.get("address") or {}).get("postalCode"),
+                    "bereich": "Schiene" if is_rail(cpvs, text) else "Straße",
                     "_eforms": f"https://oeffentlichevergabe.de/api/notices/{m.group(1)}?format=eforms&noticeVersion={m.group(2)}" if m else None,
                 })
     return out
@@ -200,8 +266,10 @@ def run_datenservice(status):
     yesterday = TODAY - dt.timedelta(days=1)
     start = (dt.date.fromisoformat(last) + dt.timedelta(days=1)) if last else TODAY - dt.timedelta(days=FIRST_RUN_DAYS)
     start = max(start, yesterday - dt.timedelta(days=MAX_CATCHUP_DAYS))
+    if BACKFILL_DAYS:
+        start = TODAY - dt.timedelta(days=BACKFILL_DAYS)
     pending = sorted(set(st.get("failed_days", [])) | {d.isoformat() for d in day_list(start, yesterday)})
-    entries, ok, failed, waiting, scanned = [], [], [], [], 0
+    entries, ok, failed, waiting, unavailable, scanned = [], [], [], [], [], 0
     for day in pending:
         try:
             code, body = http(f"https://oeffentlichevergabe.de/api/notice-exports?pubDay={day}&format=ocds.zip")
@@ -213,19 +281,23 @@ def run_datenservice(status):
             elif code in (400, 404) and day >= (TODAY - dt.timedelta(days=2)).isoformat():
                 waiting.append(day)  # Export noch nicht erstellt -> beim naechsten Lauf erneut
             elif code in (400, 404):
-                ok.append(day)  # alter Tag ohne Export (z. B. keine Bekanntmachungen)
+                # Bei der Nacherfassung ist ein fehlender Export KEIN erfolgreich
+                # gepruefter Tag (z. B. ausserhalb der Archiv-Aufbewahrung).
+                unavailable.append(day)
             else:
                 failed.append(f"{day} (HTTP {code})")
         except Exception as ex:
             failed.append(f"{day} ({str(ex)[:80]})")
         time.sleep(2)
+    entries = [e for e in entries if locate(e, e.pop("_buyer_plz", None))]
     for e in entries:
         eforms_enrich(e)
         time.sleep(1)
     retry = [f.split(" ")[0] for f in failed] + waiting
     status["datenservice"] = {
-        "status": "erfolgreich" if ok and not failed else ("teilweise" if ok else ("wartet auf Export" if waiting and not failed else "nicht erreichbar")),
+        "status": "erfolgreich" if ok and not failed and not unavailable else ("teilweise" if ok else ("wartet auf Export" if waiting and not failed and not unavailable else "nicht erreichbar")),
         "geprueft_tage": ok, "fehlgeschlagen": failed, "noch_nicht_verfuegbar": waiting,
+        "nicht_verfuegbar_tage": unavailable,
         "failed_days": retry[-MAX_CATCHUP_DAYS:],
         "last_ok_day": max(ok + ([last] if last else [])) if (ok or last) else None,
         "bekanntmachungen_gelesen": scanned, "treffer": len(entries),
@@ -238,6 +310,7 @@ TED_NUTS = " ".join(k for k in NUTS_PRIO)
 TED_CPV = "60000000 60100000 60112000 60120000 60130000 60140000 60170000 60171000 60172000 85311200"
 TED_FIELDS = ["publication-number", "notice-title", "buyer-name", "place-of-performance", "deadline-receipt-tender-date-lot",
               "publication-date", "notice-type", "buyer-city", "classification-cpv", "estimated-value-lot", "estimated-value-proc"]
+TED_FIELDS_EXTRA = TED_FIELDS + ["place-of-performance-city-lot", "place-of-performance-post-code-lot", "deadline-receipt-request-date-lot"]
 
 
 def first_lang(v):
@@ -256,13 +329,20 @@ def run_ted(status):
     st = status.get("ted", {})
     last = st.get("last_ok_day")
     since = (dt.date.fromisoformat(last) - dt.timedelta(days=2)) if last else TODAY - dt.timedelta(days=FIRST_RUN_DAYS)
+    if BACKFILL_DAYS:
+        since = TODAY - dt.timedelta(days=BACKFILL_DAYS)
+    fields = TED_FIELDS_EXTRA
     q = (f"classification-cpv IN ({TED_CPV}) AND place-of-performance IN ({TED_NUTS}) "
          f"AND publication-date>={since.strftime('%Y%m%d')}")
     out, total = [], 0
     try:
         for page in range(1, 5):
-            body = json.dumps({"query": q, "fields": TED_FIELDS, "limit": 250, "page": page}).encode()
+            body = json.dumps({"query": q, "fields": fields, "limit": 250, "page": page}).encode()
             code, raw = http("https://api.ted.europa.eu/v3/notices/search", data=body, headers={"Content-Type": "application/json"})
+            if code == 400 and fields is TED_FIELDS_EXTRA:  # Zusatzfelder nicht unterstuetzt -> Standardfelder
+                fields = TED_FIELDS
+                body = json.dumps({"query": q, "fields": fields, "limit": 250, "page": page}).encode()
+                code, raw = http("https://api.ted.europa.eu/v3/notices/search", data=body, headers={"Content-Type": "application/json"})
             if code != 200:
                 raise RuntimeError(f"HTTP {code}: {raw[:200]!r}")
             j = json.loads(raw)
@@ -276,23 +356,26 @@ def run_ted(status):
                 if not relevant(cpvs, title):
                     continue
                 regs = sorted(set(r for r in (n.get("place-of-performance") or []) if r and r != "DEU"))
-                pr = priority(regs, [])
-                if pr is None:
+                tplz = sorted({str(p) for p in (n.get("place-of-performance-post-code-lot") or []) if p})
+                tcity = sorted({str(first_lang(c)) for c in (n.get("place-of-performance-city-lot") or []) if c})
+                if not in_area(regs, tplz):
                     continue
-                dl = sorted({d[:10] for d in (n.get("deadline-receipt-tender-date-lot") or []) if d})
+                dl = sorted({d[:10] for d in (n.get("deadline-receipt-tender-date-lot") or []) + (n.get("deadline-receipt-request-date-lot") or []) if d})
                 val = first_lang(n.get("estimated-value-proc")) or first_lang(n.get("estimated-value-lot"))
                 pub = n.get("publication-number")
                 out.append({
                     "quelle": "TED", "id": f"TED-{pub}", "titel": (title.split(" – ", 2)[2] if title.startswith("Deutschland – ") and title.count(" – ") >= 2 else title),
                     "auftraggeber": first_lang(n.get("buyer-name")), "art": "Vorinformation" if nt.startswith("pin") else "Ausschreibung",
-                    "verfahren": nt, "nuts": regs, "plz": [], "orte": [first_lang(n.get("buyer-city"))] if n.get("buyer-city") else [],
-                    "region": ", ".join(NUTS_NAME.get(r, r) for r in regs), "prioritaet": pr, "cpv": cpvs[:6],
+                    "verfahren": nt, "nuts": regs, "plz": tplz, "orte": tcity or ([first_lang(n.get("buyer-city"))] if n.get("buyer-city") else []),
+                    "region": ", ".join(NUTS_NAME.get(r, r) for r in regs), "prioritaet": None, "cpv": cpvs[:6],
+                    "bereich": "Schiene" if is_rail(cpvs, title) else "Straße",
                     "frist": dl[0] if dl else "", "frist_quelle": "TED" if dl else "", "wert": float(val) if val not in (None, "") else None,
                     "lose": None, "veroeffentlicht": (n.get("publication-date") or "")[:10],
                     "link": f"https://ted.europa.eu/de/notice/{pub}/html", "beschreibung": "",
                 })
             if page * 250 >= total:
                 break
+        out = [e for e in out if locate(e)]
         status["ted"] = {"status": "erfolgreich", "seit": since.isoformat(), "bekanntmachungen_gelesen": total,
                          "treffer": len(out), "last_ok_day": TODAY.isoformat()}
     except Exception as ex:
@@ -316,7 +399,10 @@ def merge(entries, seen):
             for f in ("frist", "wert", "link", "beschreibung", "lose"):
                 if not a.get(f) and e.get(f):
                     a[f] = e[f]
-            a["prioritaet"] = min(a["prioritaet"], e["prioritaet"])
+            a["prioritaet"] = min(a["prioritaet"] or 3, e["prioritaet"] or 3)
+            for f in ("entfernung_km", "ort_genauigkeit", "plz"):
+                if e.get("ort_genauigkeit", "").startswith("PLZ") and not (a.get("ort_genauigkeit") or "").startswith("PLZ"):
+                    a[f] = e.get(f)
             a.setdefault("weitere_ids", []).append(e["id"])
         else:
             e["quellen"] = [e["quelle"]]
@@ -359,7 +445,26 @@ def main():
         if s.get("status") in ("erfolgreich", "teilweise", "wartet auf Export"):
             s["letzte_erfolgreiche_aktualisierung"] = now
         status[src] = s
-    delta = merge(ds + ted, seen)
+    entries = []
+    for e in ds + ted:
+        e.pop("_buyer_plz", None); e.pop("_eforms", None)
+        e["frist_status"] = ("abgelaufen" if e.get("frist") and e["frist"] < TODAY.isoformat()
+                             else "offen" if e.get("frist") else "unbekannt")
+        if BACKFILL_DAYS:  # Nacherfassung: nur noch offene Verfahren und aktuelle Vorinformationen
+            age = (TODAY - dt.date.fromisoformat(e["veroeffentlicht"][:10])).days if e.get("veroeffentlicht") else 0
+            if e["frist_status"] == "abgelaufen":
+                continue
+            if e["frist_status"] == "unbekannt" and e.get("art") != "Vorinformation" and age > 60:
+                continue
+            if e.get("art") == "Vorinformation" and age > 180:
+                continue
+        entries.append(e)
+    delta = merge(entries, seen)
+    status["nacherfassung_tage"] = BACKFILL_DAYS or None
+    # Genauigkeit der Umkreissuche nachvollziehbar machen: Wenn die PLZ-Datei
+    # nicht geladen wurde, bleibt nur die ungenauere NUTS-Kreismitte.
+    status["plz_geodaten"] = {"status": "erfolgreich" if plz_geo() else "nicht erreichbar (nur ungefaehre Ortspruefung)",
+                            "anzahl_postleitzahlen": len(plz_geo())}
     ok_sources = [s for s in ("datenservice", "ted") if status[s].get("status") in ("erfolgreich", "teilweise", "wartet auf Export")]
     status["erstellt"] = now
     status["gesamtstatus"] = ("erfolgreich" if len(ok_sources) == 2 else "teilweise" if ok_sources else "fehlgeschlagen")
