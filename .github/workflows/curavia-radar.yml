@@ -10,7 +10,12 @@ on:
     # GitHub rechnet in UTC. Beide Zeilen zusammen ergeben ganzjährig 16:17 Uhr Berlin:
     - cron: "17 14 * * *"   # gilt in der Sommerzeit (MESZ, UTC+2)
     - cron: "17 15 * * *"   # gilt in der Winterzeit (MEZ, UTC+1)
-  workflow_dispatch: {}      # manueller Start über "Run workflow"
+  workflow_dispatch:          # manueller Start über "Run workflow"
+    inputs:
+      nacherfassen_tage:
+        description: "Einmalige Nacherfassung: so viele Tage rückwirkend prüfen (0 = normaler Lauf, z. B. 120)"
+        required: false
+        default: "0"
 
 permissions:
   contents: write
@@ -22,7 +27,7 @@ concurrency:
 jobs:
   feed:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 90
     steps:
       - name: Passenden Zeitplan wählen (Sommer-/Winterzeit)
         id: gate
@@ -48,6 +53,8 @@ jobs:
 
       - name: Vergabedaten abrufen und filtern
         if: steps.gate.outputs.run == 'true'
+        env:
+          NACHERFASSEN_TAGE: ${{ github.event.inputs.nacherfassen_tage || '0' }}
         run: python3 relay/radar_feed.py
 
       - name: Bei Absturz Fehlerstatus schreiben (keine alten Daten als aktuell)
