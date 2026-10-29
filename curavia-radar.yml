@@ -1,0 +1,82 @@
+name: CuraVia Radar-Feed
+
+# Lädt täglich um 16:17 Uhr (Europe/Berlin) die offiziellen Open-Data-Exporte des
+# Datenservice Öffentlicher Einkauf und die TED-API, filtert auf Personenbeförderung
+# rund um 61381 Friedrichsdorf und speichert die Ergebnisse als JSON in data/.
+# Keine Passwörter oder Zugangsdaten nötig (nur der automatische GITHUB_TOKEN zum Speichern).
+
+on:
+  schedule:
+    # GitHub rechnet in UTC. Beide Zeilen zusammen ergeben ganzjährig 16:17 Uhr Berlin:
+    - cron: "17 14 * * *"   # gilt in der Sommerzeit (MESZ, UTC+2)
+    - cron: "17 15 * * *"   # gilt in der Winterzeit (MEZ, UTC+1)
+  workflow_dispatch: {}      # manueller Start über "Run workflow"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: curavia-radar-feed
+  cancel-in-progress: false
+
+jobs:
+  feed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Passenden Zeitplan wählen (Sommer-/Winterzeit)
+        id: gate
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          OFFSET=$(TZ=Europe/Berlin date +%z)
+          if { [ "$OFFSET" = "+0200" ] && [ "${{ github.event.schedule }}" = "17 14 * * *" ]; } || \
+             { [ "$OFFSET" = "+0100" ] && [ "${{ github.event.schedule }}" = "17 15 * * *" ]; }; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Anderer Zeitplan ist heute zuständig (Berlin-Offset $OFFSET) – übersprungen."
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
+
+      - name: Startzeit merken
+        if: steps.gate.outputs.run == 'true'
+        run: echo "RUN_STARTED=$(date -u +%Y-%m-%dT%H:%M:%S+00:00)" >> "$GITHUB_ENV"
+
+      - name: Vergabedaten abrufen und filtern
+        if: steps.gate.outputs.run == 'true'
+        run: python3 relay/radar_feed.py
+
+      - name: Bei Absturz Fehlerstatus schreiben (keine alten Daten als aktuell)
+        if: failure() && steps.gate.outputs.run == 'true'
+        run: |
+          python3 - <<'PY'
+          import json, os, datetime as dt
+          os.makedirs("data", exist_ok=True)
+          now = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+          try:
+              s = json.load(open("data/status.json", encoding="utf-8"))
+          except Exception:
+              s = {}
+          if s.get("erstellt", "") < os.environ.get("RUN_STARTED", ""):
+              s.update({"erstellt": now, "gesamtstatus": "fehlgeschlagen", "gueltig": False,
+                        "fehler": "Workflow abgebrochen - siehe GitHub Actions-Log"})
+              for src in ("datenservice", "ted"):
+                  s.setdefault(src, {}).update({"status": "nicht erreichbar", "lauf": now})
+              json.dump(s, open("data/status.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+              json.dump({"erstellt": now, "gueltig": False, "gepruefte_quellen": [], "eintraege": []},
+                        open("data/delta.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+          PY
+
+      - name: Ergebnisse im Repository speichern
+        if: always() && steps.gate.outputs.run == 'true'
+        run: |
+          git config user.name "curavia-radar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then echo "Keine Änderungen."; exit 0; fi
+          git commit -m "Radar-Feed $(TZ=Europe/Berlin date +%Y-%m-%d)"
+          for i in 1 2 3; do git pull --rebase --quiet && git push && break; sleep 5; done
