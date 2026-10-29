@@ -1,0 +1,224 @@
+[
+ {
+  "erstellt": "2026-10-29T19:26:41+00:00",
+  "gepruefte_quellen": [
+   "datenservice",
+   "ted"
+  ],
+  "eintraege": [
+   {
+    "quelle": "Datenservice",
+    "id": "DS-25954592",
+    "titel": "Schienenersatzverkehr (SEV) für vom 02.11.2026 bis 22.11.2026 zwischen den Haltestellen Friedensbrücke - Oberforsthaus und Haardtwaldplatz",
+    "auftraggeber": "Stadtwerke Verkehrsgesellschaft Frankfurt am Main mbH (VGF)",
+    "art": "Ausschreibung",
+    "verfahren": "Public announcement",
+    "nuts": [
+     "DE7"
+    ],
+    "plz": [
+     "60311"
+    ],
+    "orte": [
+     "60311 Frankfurt am Main"
+    ],
+    "region": "Hessen",
+    "prioritaet": 2,
+    "cpv": [
+     "60170000"
+    ],
+    "frist": "2026-10-26",
+    "frist_quelle": "eForms (Angebotsfrist)",
+    "wert": null,
+    "lose": 1,
+    "veroeffentlicht": "2026-10-21",
+    "link": "https://bieterzugang.deutsche-evergabe.de/evergabe.bieter/api/supplier/external/deeplink/subproject/a073216d-2e63-4172-a3f5-40f6dadf3c15",
+    "datenservice_api": "https://oeffentlichevergabe.de/api/notices/25954592?format=ocds&noticeVersion=1",
+    "beschreibung": "SEV für Linien 15/21 wegen Gleiserneuerung\n\nSchienenersatzverkehr zwischen den Haltestellen Friedensbrücke - Oberforsthaus und Haardtwaldplatz\n\n\nSEV 1\nLinie 15 zw. Friedensbrücke und Haardtwaldplatz:\nStart: Montag 02.11.2026 Betriebsbeginn \nEnde: Samstag 21.11.2026 Betriebsende\n\nSEV 2\nLinie 21 zw. Friedensbrücke und Oberforsthaus:\nStart: 02.11.2026 Betriebsbeginn\nEnde: 21.11.2026 ca. 14:00 Uhr\n\nSchienenersatzverkehr (SEV) für vom 02.11.2026 bis 22.11.2026 zwischen den Haltestellen Friedensbrücke - Oberforsthaus und Haardtwaldplatz",
+    "key": "4144f658244d4d70",
+    "quellen": [
+     "Datenservice"
+    ],
+    "delta": "neu"
+   },
+   {
+    "quelle": "Datenservice",
+    "id": "DS-25978004",
+    "titel": "Schienenersatzverkehr (SEV) für vom 21.11.2026 bis 22.11.2026 zwischen den Haltestellen Konstablerwache und Preungesheim",
+    "auftraggeber": "Stadtwerke Verkehrsgesellschaft Frankfurt am Main mbH (VGF)",
+    "art": "Ausschreibung",
+    "verfahren": "Public announcement",
+    "nuts": [
+     "DE7"
+    ],
+    "plz": [
+     "60311"
+    ],
+    "orte": [
+     "60311 Frankfurt am Main"
+    ],
+    "region": "Hessen",
+    "prioritaet": 2,
+    "cpv": [
+     "60170000"
+    ],
+    "frist": "2026-11-06",
+    "frist_quelle": "eForms (Angebotsfrist)",
+    "wert": null,
+    "lose": 1,
+    "veroeffentlicht": "2026-10-28",
+    "link": "https://bieterzugang.deutsche-evergabe.de/evergabe.bieter/api/supplier/external/deeplink/subproject/fab334b3-cbd8-4938-b7e3-12d31af800af",
+    "datenservice_api": "https://oeffentlichevergabe.de/api/notices/25978004?format=ocds&noticeVersion=1",
+    "beschreibung": "SEV für Linie U5\n\nSchienenersatzverkehr zwischen den Haltestellen Konstablerwache und Preungesheim\n\n\nBetriebsbeginn: Samstag 21.11.2026 \nBetriebsende: Sonntag 22.11.2026\n\nSchienenersatzverkehr (SEV) für vom 21.11.2026 bis 22.11.2026 zwischen den Haltestellen Konstablerwache und Preungesheim",
+    "key": "0cceb741c3aee906",
+    "quellen": [
+     "Datenservice"
+    ],
+    "delta": "neu"
+   },
+   {
+    "quelle": "Datenservice",
+    "id": "DS-e58596d9-a4ca-496b-9f12-6545fa43e011",
+    "titel": "Linienbündel Miltenberg Süd, Zusammenarbeit mit AMINA",
+    "auftraggeber": "Landratsamt Miltenberg",
+    "art": "Ausschreibung",
+    "verfahren": "Open",
+    "nuts": [
+     "DE269"
+    ],
+    "plz": [
+     "63897"
+    ],
+    "orte": [
+     "Miltenberg"
+    ],
+    "region": "DE269",
+    "prioritaet": 3,
+    "cpv": [
+     "60112000",
+     "60140000"
+    ],
+    "frist": "2026-10-27",
+    "frist_quelle": "eForms (Angebotsfrist)",
+    "wert": null,
+    "lose": 1,
+    "veroeffentlicht": "2026-10-18",
+    "link": "https://plattform.aumass.de/Veroeffentlichung/av269774-eu",
+    "datenservice_api": "https://oeffentlichevergabe.de/api/notices/e58596d9-a4ca-496b-9f12-6545fa43e011?format=ocds&noticeVersion=01",
+    "beschreibung": "Vergabe öffentlicher Personenverkehrsleistungen im Linienverkehr mit Kraftfahrzeugen und im On Demand-Verkehr im Linienbündel „Miltenberg-Süd“",
+    "key": "4d3948e96c7dd922",
+    "quellen": [
+     "Datenservice"
+    ],
+    "delta": "neu"
+   },
+   {
+    "quelle": "Datenservice",
+    "id": "DS-216b9688-3acb-4093-a286-b98e70df3faa",
+    "titel": "Linienbündel „Bad Schwalbach / Aar“ (Los 1), Linienbündel „Rheingau-Ost“\n(Los 2), Linienbündel „Taunusstein“ (Los 3)",
+    "auftraggeber": "Rheingau-Taunus-Verkehrsgesellschaft mbH",
+    "art": "Ausschreibung",
+    "verfahren": "Open",
+    "nuts": [
+     "DE71D"
+    ],
+    "plz": [],
+    "orte": [],
+    "region": "Rheingau-Taunus-Kreis",
+    "prioritaet": 3,
+    "cpv": [
+     "60112000"
+    ],
+    "frist": "2026-12-07",
+    "frist_quelle": "eForms (Angebotsfrist)",
+    "wert": null,
+    "lose": 3,
+    "veroeffentlicht": "2026-10-25",
+    "link": "https://www.subreport.de/E77957963",
+    "datenservice_api": "https://oeffentlichevergabe.de/api/notices/216b9688-3acb-4093-a286-b98e70df3faa?format=ocds&noticeVersion=01",
+    "beschreibung": "Öffentliche Nahverkehrsleistungen auf dem Gebiet des Rheingau-Taunus-Kreises und der Stadt Wiesbaden.",
+    "key": "5a492be3d9c54d4d",
+    "quellen": [
+     "Datenservice",
+     "TED"
+    ],
+    "weitere_ids": [
+     "TED-742840-2026"
+    ],
+    "delta": "neu"
+   },
+   {
+    "quelle": "Datenservice",
+    "id": "DS-f91d82aa-258a-4bdc-8808-f36a9e4be9ae",
+    "titel": "Vergabe eines öffentlichen Dienstleistungsauftrages über Verkehrsleistungen im öffentlichen Straßenpersonennahverkehr im Gebiet des Landkreises Aschaffenburg und der kreisfreien Stadt Aschaffenburg gemäß Art. 5 Abs. 2 Satz 1 Verordnung (EG) Nr. 1370/2007 (VO 1370) an einen internen Betreiber",
+    "auftraggeber": "Landkreis Aschaffenburg",
+    "art": "Vorinformation",
+    "verfahren": "Negotiated without prior call for competition",
+    "nuts": [
+     "DE264"
+    ],
+    "plz": [
+     "63739"
+    ],
+    "orte": [
+     "Aschaffenburg"
+    ],
+    "region": "Landkreis Aschaffenburg",
+    "prioritaet": 3,
+    "cpv": [
+     "60112000"
+    ],
+    "frist": "",
+    "frist_quelle": "",
+    "wert": null,
+    "lose": 1,
+    "veroeffentlicht": "2026-10-20",
+    "link": "https://oeffentlichevergabe.de/ui/de/search/details?noticeId=f91d82aa-258a-4bdc-8808-f36a9e4be9ae",
+    "datenservice_api": "https://oeffentlichevergabe.de/api/notices/f91d82aa-258a-4bdc-8808-f36a9e4be9ae?format=ocds&noticeVersion=01",
+    "beschreibung": "Der Landkreis Aschaffenburg ist gemäß Art. 8 Abs. 1 Gesetz über den öffentlichen Personennahverkehr in Bayern (BayÖPNVG) Aufgabenträger für den ÖPNV und damit gemäß Art. 8 Abs. 3 BayÖPNVG zuständige Behörde für die Vereinbarung oder Auferlegung gemeinwirtschaftlicher Verkehrsleistungen i. S. v. Art. 2 lit. b und VO 1370. Er ist zudem von der Stadt Aschaffenburg, die ihrerseits gemäß Art. 8 Abs. 1 BayÖPNVG Aufgabenträgerin für den ÖPNV und damit gemäß Art. 8 Abs. 3 BayÖPNVG zuständige Behörde für die Vereinbarung oder Auferlegung gemeinwirtschaftlicher Verkehrsleistungen i. S. v. Art. 2 lit. b ",
+    "key": "0830a72bd2e6198d",
+    "quellen": [
+     "Datenservice",
+     "TED"
+    ],
+    "weitere_ids": [
+     "TED-722954-2026"
+    ],
+    "delta": "neu"
+   },
+   {
+    "quelle": "TED",
+    "id": "TED-750414-2026",
+    "titel": "Öffentlicher Dienstleistungsauftrag im Schienenpersonennahverkehr im Sinne des Art. 5 Abs. 1 der Verordnung (EG) 1370/2007 vom 23.10.2007: Kahlgrund 2031+",
+    "auftraggeber": "Bayerische Eisenbahngesellschaft mbH (BEG)",
+    "art": "Vorinformation",
+    "verfahren": "pin-only",
+    "nuts": [
+     "DE264"
+    ],
+    "plz": [],
+    "orte": [
+     "München"
+    ],
+    "region": "Landkreis Aschaffenburg",
+    "prioritaet": 3,
+    "cpv": [
+     "60210000",
+     "60210000"
+    ],
+    "frist": "",
+    "frist_quelle": "",
+    "wert": null,
+    "lose": null,
+    "veroeffentlicht": "2026-10-29",
+    "link": "https://ted.europa.eu/de/notice/750414-2026/html",
+    "beschreibung": "",
+    "key": "c00873394693ba2a",
+    "quellen": [
+     "TED"
+    ],
+    "delta": "neu"
+   }
+  ]
+ }
+]

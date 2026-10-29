@@ -1,0 +1,40 @@
+{
+ "datenservice": {
+  "status": "erfolgreich",
+  "geprueft_tage": [
+   "2026-10-18",
+   "2026-10-19",
+   "2026-10-20",
+   "2026-10-21",
+   "2026-10-22",
+   "2026-10-23",
+   "2026-10-24",
+   "2026-10-25",
+   "2026-10-26",
+   "2026-10-27",
+   "2026-10-28"
+  ],
+  "fehlgeschlagen": [],
+  "noch_nicht_verfuegbar": [],
+  "failed_days": [],
+  "last_ok_day": "2026-10-28",
+  "bekanntmachungen_gelesen": 8131,
+  "treffer": 5,
+  "lauf": "2026-10-29T19:26:41+00:00",
+  "letzte_erfolgreiche_aktualisierung": "2026-10-29T19:26:41+00:00"
+ },
+ "ted": {
+  "status": "erfolgreich",
+  "seit": "2026-10-15",
+  "bekanntmachungen_gelesen": 9,
+  "treffer": 3,
+  "last_ok_day": "2026-10-29",
+  "lauf": "2026-10-29T19:26:41+00:00",
+  "letzte_erfolgreiche_aktualisierung": "2026-10-29T19:26:41+00:00"
+ },
+ "erstellt": "2026-10-29T19:26:41+00:00",
+ "gesamtstatus": "erfolgreich",
+ "gueltig": true,
+ "hinweis": "delta.json enthält nur Treffer der Quellen mit Status erfolgreich/teilweise. Quellen mit 'nicht erreichbar' wurden in diesem Lauf NICHT geprüft.",
+ "delta_anzahl": 6
+}
