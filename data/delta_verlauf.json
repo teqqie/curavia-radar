@@ -1,5 +1,54 @@
 [
  {
+  "erstellt": "2026-10-30T19:56:59+00:00",
+  "gepruefte_quellen": [
+   "datenservice",
+   "ted"
+  ],
+  "eintraege": [
+   {
+    "quelle": "TED",
+    "id": "TED-742840-2026",
+    "titel": "Linienbündel „Bad Schwalbach / Aar“ (Los 1), Linienbündel „Rheingau-Ost“ (Los 2), Linienbündel „Taunusstein“ (Los 3)",
+    "auftraggeber": "Rheingau-Taunus-Verkehrsgesellschaft mbH",
+    "art": "Ausschreibung",
+    "verfahren": "cn-standard",
+    "nuts": [
+     "DE71D"
+    ],
+    "plz": [],
+    "orte": [
+     "Taunusstein"
+    ],
+    "region": "Rheingau-Taunus-Kreis",
+    "prioritaet": 3,
+    "cpv": [
+     "60112000",
+     "60112000",
+     "60112000",
+     "60112000"
+    ],
+    "bereich": "Straße",
+    "frist": "2026-12-07",
+    "frist_quelle": "TED",
+    "wert": null,
+    "lose": null,
+    "veroeffentlicht": "2026-10-27",
+    "link": "https://ted.europa.eu/de/notice/742840-2026/html",
+    "beschreibung": "",
+    "entfernung_km": 44,
+    "ort_genauigkeit": "Kreismitte (ungefähr)",
+    "frist_status": "offen",
+    "key": "5a492be3d9c54d4d",
+    "quellen": [
+     "TED"
+    ],
+    "delta": "geändert",
+    "aenderung": "Angaben geändert"
+   }
+  ]
+ },
+ {
   "erstellt": "2026-10-29T19:48:35+00:00",
   "gepruefte_quellen": [
    "datenservice",
