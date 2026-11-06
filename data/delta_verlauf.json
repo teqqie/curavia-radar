@@ -1,5 +1,56 @@
 [
  {
+  "erstellt": "2026-11-06T20:56:05+00:00",
+  "gepruefte_quellen": [
+   "datenservice",
+   "ted"
+  ],
+  "eintraege": [
+   {
+    "quelle": "Datenservice",
+    "id": "DS-26001836",
+    "titel": "Onlinebefragungen und Marktforschungsleistungen",
+    "auftraggeber": "traffiQ Lokale Nahverkehrsgesellschaft Frankfurt am Main mbH",
+    "art": "Ausschreibung",
+    "verfahren": "Public announcement",
+    "nuts": [
+     "DE7"
+    ],
+    "plz": [
+     "60313"
+    ],
+    "orte": [
+     "60313 Frankfurt am Main"
+    ],
+    "region": "Hessen",
+    "prioritaet": 2,
+    "cpv": [
+     "60112000",
+     "72310000",
+     "79300000",
+     "79311000"
+    ],
+    "frist": "2026-11-20",
+    "frist_quelle": "eForms (Angebotsfrist)",
+    "wert": null,
+    "lose": 1,
+    "veroeffentlicht": "2026-11-05",
+    "link": "https://www.had.de/onlinesuche_langfassung.html?showpub=W477XMS794DO36R0",
+    "datenservice_api": "https://oeffentlichevergabe.de/api/notices/26001836?format=ocds&noticeVersion=1",
+    "beschreibung": "Onlinebefragungen und Marktforschungsleistungen",
+    "bereich": "Straße",
+    "entfernung_km": 17,
+    "ort_genauigkeit": "PLZ des Leistungsorts",
+    "frist_status": "offen",
+    "key": "186699db12049806",
+    "quellen": [
+     "Datenservice"
+    ],
+    "delta": "neu"
+   }
+  ]
+ },
+ {
   "erstellt": "2026-11-05T21:29:03+00:00",
   "gepruefte_quellen": [
    "datenservice",
