@@ -29,7 +29,7 @@
   "frist": "2026-12-07",
   "art": "Ausschreibung",
   "titel": "Linienbündel „Bad Schwalbach / Aar“ (Los 1), Linienbündel „Rheingau-Ost“\n(Los 2), Linienbündel „Taunusstein“ (Los 3)",
-  "zuletzt": "2026-10-30"
+  "zuletzt": "2026-11-09"
  },
  "0cceb741c3aee906": {
   "fp": "6514a7bc512e",
@@ -110,5 +110,21 @@
   "art": "Ausschreibung",
   "titel": "Onlinebefragungen und Marktforschungsleistungen",
   "zuletzt": "2026-11-06"
+ },
+ "e7820ee24c95a75c": {
+  "fp": "cf1f733a652a",
+  "erstmals": "2026-11-09",
+  "frist": "2026-12-07",
+  "art": "Ausschreibung",
+  "titel": "Linienbündel Babenhausen",
+  "zuletzt": "2026-11-09"
+ },
+ "deb286a93b8a5caf": {
+  "fp": "33564e9bed66",
+  "erstmals": "2026-11-09",
+  "frist": "2026-12-07",
+  "art": "Ausschreibung",
+  "titel": "Linienbündel Groß-Umstadt",
+  "zuletzt": "2026-11-09"
  }
 }

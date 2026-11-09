@@ -1,5 +1,92 @@
 [
  {
+  "erstellt": "2026-11-09T23:48:01+00:00",
+  "gepruefte_quellen": [
+   "datenservice",
+   "ted"
+  ],
+  "eintraege": [
+   {
+    "quelle": "TED",
+    "id": "TED-781393-2026",
+    "titel": "Linienbündel Babenhausen",
+    "auftraggeber": "Darmstadt-Dieburger Nahverkehrsorganisation - DADINA -",
+    "art": "Ausschreibung",
+    "verfahren": "cn-standard",
+    "nuts": [
+     "DE716"
+    ],
+    "plz": [],
+    "orte": [
+     "Darmstadt-Dieburg"
+    ],
+    "region": "Darmstadt-Dieburg",
+    "prioritaet": 3,
+    "cpv": [
+     "60112000",
+     "60112000"
+    ],
+    "bereich": "Straße",
+    "frist": "2026-12-07",
+    "frist_quelle": "TED",
+    "wert": null,
+    "lose": null,
+    "veroeffentlicht": "2026-11-10",
+    "link": "https://ted.europa.eu/de/notice/781393-2026/html",
+    "beschreibung": "",
+    "entfernung_km": 47,
+    "ort_genauigkeit": "Kreismitte (ungefähr)",
+    "frist_status": "offen",
+    "key": "e7820ee24c95a75c",
+    "quellen": [
+     "TED"
+    ],
+    "delta": "neu"
+   },
+   {
+    "quelle": "TED",
+    "id": "TED-782123-2026",
+    "titel": "Linienbündel Groß-Umstadt",
+    "auftraggeber": "Darmstadt-Dieburger Nahverkehrsorganisation - DADINA -",
+    "art": "Ausschreibung",
+    "verfahren": "cn-standard",
+    "nuts": [
+     "DE269",
+     "DE716",
+     "DE71B"
+    ],
+    "plz": [],
+    "orte": [
+     "Darmstadt-Dieburg",
+     "Miltenberg",
+     "Odenwaldkreis"
+    ],
+    "region": "DE269, Darmstadt-Dieburg, DE71B",
+    "prioritaet": 3,
+    "cpv": [
+     "60112000",
+     "60112000"
+    ],
+    "bereich": "Straße",
+    "frist": "2026-12-07",
+    "frist_quelle": "TED",
+    "wert": null,
+    "lose": null,
+    "veroeffentlicht": "2026-11-10",
+    "link": "https://ted.europa.eu/de/notice/782123-2026/html",
+    "beschreibung": "",
+    "entfernung_km": 47,
+    "ort_genauigkeit": "Kreismitte (ungefähr)",
+    "frist_status": "offen",
+    "key": "deb286a93b8a5caf",
+    "quellen": [
+     "TED"
+    ],
+    "delta": "neu"
+   }
+  ]
+ },
+ {
   "erstellt": "2026-11-08T19:44:40+00:00",
   "gepruefte_quellen": [
    "ted"

@@ -1,34 +1,34 @@
 {
  "datenservice": {
-  "status": "nicht erreichbar",
-  "geprueft_tage": [],
-  "fehlgeschlagen": [
-   "2026-11-07 (https://oeffentlichevergabe.de/api/notice-exports?pubDay=2026-11-07&format=ocds.)"
+  "status": "erfolgreich",
+  "geprueft_tage": [
+   "2026-11-07",
+   "2026-11-08"
   ],
+  "fehlgeschlagen": [],
   "noch_nicht_verfuegbar": [],
   "nicht_verfuegbar_tage": [],
-  "failed_days": [
-   "2026-11-07"
-  ],
-  "last_ok_day": "2026-11-06",
+  "failed_days": [],
+  "last_ok_day": "2026-11-08",
   "bekanntmachungen_gelesen": 0,
   "treffer": 0,
-  "lauf": "2026-11-08T19:44:40+00:00"
+  "lauf": "2026-11-09T23:48:01+00:00",
+  "letzte_erfolgreiche_aktualisierung": "2026-11-09T23:48:01+00:00"
  },
  "ted": {
   "status": "erfolgreich",
-  "seit": "2026-11-05",
-  "bekanntmachungen_gelesen": 2,
-  "treffer": 0,
-  "last_ok_day": "2026-11-08",
-  "lauf": "2026-11-08T19:44:40+00:00",
-  "letzte_erfolgreiche_aktualisierung": "2026-11-08T19:44:40+00:00"
+  "seit": "2026-11-06",
+  "bekanntmachungen_gelesen": 7,
+  "treffer": 4,
+  "last_ok_day": "2026-11-09",
+  "lauf": "2026-11-09T23:48:01+00:00",
+  "letzte_erfolgreiche_aktualisierung": "2026-11-09T23:48:01+00:00"
  },
- "erstellt": "2026-11-08T19:44:40+00:00",
- "gesamtstatus": "teilweise",
+ "erstellt": "2026-11-09T23:48:01+00:00",
+ "gesamtstatus": "erfolgreich",
  "gueltig": true,
  "hinweis": "delta.json enthält nur Treffer der Quellen mit Status erfolgreich/teilweise. Quellen mit 'nicht erreichbar' wurden in diesem Lauf NICHT geprüft.",
- "delta_anzahl": 0,
+ "delta_anzahl": 2,
  "nacherfassung_tage": null,
  "plz_geodaten": {
   "status": "erfolgreich",
