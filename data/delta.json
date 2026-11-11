@@ -1,9 +1,51 @@
 {
- "erstellt": "2026-11-10T21:20:22+00:00",
+ "erstellt": "2026-11-11T21:59:53+00:00",
  "gueltig": true,
  "gepruefte_quellen": [
   "datenservice",
   "ted"
  ],
- "eintraege": []
+ "eintraege": [
+  {
+   "quelle": "Datenservice",
+   "id": "DS-65ce58cd-e611-4b8d-b1d6-d61dc5515c23",
+   "titel": "Linienbündel „Bad Schwalbach / Aar“ (Los 1), Linienbündel „Rheingau-Ost“\n(Los 2), Linienbündel „Taunusstein“ (Los 3)",
+   "auftraggeber": "Rheingau-Taunus-Verkehrsgesellschaft mbH",
+   "art": "Ausschreibung",
+   "verfahren": "Open",
+   "nuts": [
+    "DE71D"
+   ],
+   "plz": [],
+   "orte": [],
+   "region": "Rheingau-Taunus-Kreis",
+   "prioritaet": 3,
+   "cpv": [
+    "60112000"
+   ],
+   "frist": "2026-12-14",
+   "frist_quelle": "eForms (Angebotsfrist)",
+   "wert": null,
+   "lose": 3,
+   "veroeffentlicht": "2026-11-10",
+   "link": "https://www.subreport.de/E77957963",
+   "datenservice_api": "https://oeffentlichevergabe.de/api/notices/65ce58cd-e611-4b8d-b1d6-d61dc5515c23?format=ocds&noticeVersion=01",
+   "beschreibung": "Öffentliche Nahverkehrsleistungen auf dem Gebiet des Rheingau-Taunus-Kreises und der Stadt Wiesbaden.",
+   "bereich": "Straße",
+   "entfernung_km": 44,
+   "ort_genauigkeit": "Kreismitte (ungefähr)",
+   "frist_status": "offen",
+   "key": "5a492be3d9c54d4d",
+   "quellen": [
+    "Datenservice",
+    "TED"
+   ],
+   "weitere_ids": [
+    "TED-777879-2026",
+    "TED-779603-2026"
+   ],
+   "delta": "geändert",
+   "aenderung": "Frist geändert: 2026-12-07 → 2026-12-14"
+  }
+ ]
 }
