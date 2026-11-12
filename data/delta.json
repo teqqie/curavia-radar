@@ -1,5 +1,5 @@
 {
- "erstellt": "2026-11-11T21:59:53+00:00",
+ "erstellt": "2026-11-12T21:51:37+00:00",
  "gueltig": true,
  "gepruefte_quellen": [
   "datenservice",
@@ -7,45 +7,85 @@
  ],
  "eintraege": [
   {
-   "quelle": "Datenservice",
-   "id": "DS-65ce58cd-e611-4b8d-b1d6-d61dc5515c23",
-   "titel": "Linienbündel „Bad Schwalbach / Aar“ (Los 1), Linienbündel „Rheingau-Ost“\n(Los 2), Linienbündel „Taunusstein“ (Los 3)",
+   "quelle": "TED",
+   "id": "TED-777879-2026",
+   "titel": "Linienbündel „Bad Schwalbach / Aar“ (Los 1), Linienbündel „Rheingau-Ost“ (Los 2), Linienbündel „Taunusstein“ (Los 3)",
    "auftraggeber": "Rheingau-Taunus-Verkehrsgesellschaft mbH",
    "art": "Ausschreibung",
-   "verfahren": "Open",
+   "verfahren": "cn-standard",
    "nuts": [
     "DE71D"
    ],
    "plz": [],
-   "orte": [],
+   "orte": [
+    "Taunusstein"
+   ],
    "region": "Rheingau-Taunus-Kreis",
    "prioritaet": 3,
    "cpv": [
+    "60112000",
+    "60112000",
+    "60112000",
     "60112000"
    ],
-   "frist": "2026-12-14",
-   "frist_quelle": "eForms (Angebotsfrist)",
-   "wert": null,
-   "lose": 3,
-   "veroeffentlicht": "2026-11-10",
-   "link": "https://www.subreport.de/E77957963",
-   "datenservice_api": "https://oeffentlichevergabe.de/api/notices/65ce58cd-e611-4b8d-b1d6-d61dc5515c23?format=ocds&noticeVersion=01",
-   "beschreibung": "Öffentliche Nahverkehrsleistungen auf dem Gebiet des Rheingau-Taunus-Kreises und der Stadt Wiesbaden.",
    "bereich": "Straße",
+   "frist": "2026-12-07",
+   "frist_quelle": "TED",
+   "wert": null,
+   "lose": null,
+   "veroeffentlicht": "2026-11-09",
+   "link": "https://ted.europa.eu/de/notice/777879-2026/html",
+   "beschreibung": "",
    "entfernung_km": 44,
    "ort_genauigkeit": "Kreismitte (ungefähr)",
    "frist_status": "offen",
    "key": "5a492be3d9c54d4d",
    "quellen": [
-    "Datenservice",
     "TED"
    ],
    "weitere_ids": [
-    "TED-777879-2026",
     "TED-779603-2026"
    ],
    "delta": "geändert",
-   "aenderung": "Frist geändert: 2026-12-07 → 2026-12-14"
+   "aenderung": "Frist geändert: 2026-12-14 → 2026-12-07"
+  },
+  {
+   "quelle": "TED",
+   "id": "TED-786768-2026",
+   "titel": "Ausschreibung öffentlicher Personenverkehrsdienste im Linienbedarfsverkehr (On-Demand-Verkehr) im Main-Kinzig-Kreis und in der Stadt Hanau - zwei Gebietslose",
+   "auftraggeber": "Hanauer Straßenbahn GmbH",
+   "art": "Ausschreibung",
+   "verfahren": "cn-standard",
+   "nuts": [
+    "DE719"
+   ],
+   "plz": [],
+   "orte": [
+    "Hanau"
+   ],
+   "region": "Main-Kinzig-Kreis",
+   "prioritaet": 3,
+   "cpv": [
+    "60140000",
+    "60140000",
+    "60140000"
+   ],
+   "bereich": "Straße",
+   "frist": "2026-12-11",
+   "frist_quelle": "TED",
+   "wert": null,
+   "lose": null,
+   "veroeffentlicht": "2026-11-12",
+   "link": "https://ted.europa.eu/de/notice/786768-2026/html",
+   "beschreibung": "",
+   "entfernung_km": 41,
+   "ort_genauigkeit": "Kreismitte (ungefähr)",
+   "frist_status": "offen",
+   "key": "17c90e6c04231a34",
+   "quellen": [
+    "TED"
+   ],
+   "delta": "neu"
   }
  ]
 }
