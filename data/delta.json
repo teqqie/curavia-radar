@@ -1,5 +1,5 @@
 {
- "erstellt": "2026-11-12T21:51:37+00:00",
+ "erstellt": "2026-11-13T21:26:39+00:00",
  "gueltig": true,
  "gepruefte_quellen": [
   "datenservice",
@@ -8,7 +8,7 @@
  "eintraege": [
   {
    "quelle": "TED",
-   "id": "TED-777879-2026",
+   "id": "TED-779603-2026",
    "titel": "Linienbündel „Bad Schwalbach / Aar“ (Los 1), Linienbündel „Rheingau-Ost“ (Los 2), Linienbündel „Taunusstein“ (Los 3)",
    "auftraggeber": "Rheingau-Taunus-Verkehrsgesellschaft mbH",
    "art": "Ausschreibung",
@@ -29,12 +29,12 @@
     "60112000"
    ],
    "bereich": "Straße",
-   "frist": "2026-12-07",
+   "frist": "2026-12-14",
    "frist_quelle": "TED",
    "wert": null,
    "lose": null,
-   "veroeffentlicht": "2026-11-09",
-   "link": "https://ted.europa.eu/de/notice/777879-2026/html",
+   "veroeffentlicht": "2026-11-10",
+   "link": "https://ted.europa.eu/de/notice/779603-2026/html",
    "beschreibung": "",
    "entfernung_km": 44,
    "ort_genauigkeit": "Kreismitte (ungefähr)",
@@ -43,49 +43,8 @@
    "quellen": [
     "TED"
    ],
-   "weitere_ids": [
-    "TED-779603-2026"
-   ],
    "delta": "geändert",
-   "aenderung": "Frist geändert: 2026-12-14 → 2026-12-07"
-  },
-  {
-   "quelle": "TED",
-   "id": "TED-786768-2026",
-   "titel": "Ausschreibung öffentlicher Personenverkehrsdienste im Linienbedarfsverkehr (On-Demand-Verkehr) im Main-Kinzig-Kreis und in der Stadt Hanau - zwei Gebietslose",
-   "auftraggeber": "Hanauer Straßenbahn GmbH",
-   "art": "Ausschreibung",
-   "verfahren": "cn-standard",
-   "nuts": [
-    "DE719"
-   ],
-   "plz": [],
-   "orte": [
-    "Hanau"
-   ],
-   "region": "Main-Kinzig-Kreis",
-   "prioritaet": 3,
-   "cpv": [
-    "60140000",
-    "60140000",
-    "60140000"
-   ],
-   "bereich": "Straße",
-   "frist": "2026-12-11",
-   "frist_quelle": "TED",
-   "wert": null,
-   "lose": null,
-   "veroeffentlicht": "2026-11-12",
-   "link": "https://ted.europa.eu/de/notice/786768-2026/html",
-   "beschreibung": "",
-   "entfernung_km": 41,
-   "ort_genauigkeit": "Kreismitte (ungefähr)",
-   "frist_status": "offen",
-   "key": "17c90e6c04231a34",
-   "quellen": [
-    "TED"
-   ],
-   "delta": "neu"
+   "aenderung": "Frist geändert: 2026-12-07 → 2026-12-14"
   }
  ]
 }
