@@ -2,32 +2,32 @@
  "datenservice": {
   "status": "erfolgreich",
   "geprueft_tage": [
-   "2026-11-12"
+   "2026-11-13"
   ],
   "fehlgeschlagen": [],
   "noch_nicht_verfuegbar": [],
   "nicht_verfuegbar_tage": [],
   "failed_days": [],
-  "last_ok_day": "2026-11-12",
-  "bekanntmachungen_gelesen": 1149,
-  "treffer": 1,
-  "lauf": "2026-11-13T21:26:39+00:00",
-  "letzte_erfolgreiche_aktualisierung": "2026-11-13T21:26:39+00:00"
+  "last_ok_day": "2026-11-13",
+  "bekanntmachungen_gelesen": 1126,
+  "treffer": 0,
+  "lauf": "2026-11-14T19:57:26+00:00",
+  "letzte_erfolgreiche_aktualisierung": "2026-11-14T19:57:26+00:00"
  },
  "ted": {
   "status": "erfolgreich",
-  "seit": "2026-11-10",
-  "bekanntmachungen_gelesen": 6,
-  "treffer": 4,
-  "last_ok_day": "2026-11-13",
-  "lauf": "2026-11-13T21:26:39+00:00",
-  "letzte_erfolgreiche_aktualisierung": "2026-11-13T21:26:39+00:00"
+  "seit": "2026-11-11",
+  "bekanntmachungen_gelesen": 2,
+  "treffer": 1,
+  "last_ok_day": "2026-11-14",
+  "lauf": "2026-11-14T19:57:26+00:00",
+  "letzte_erfolgreiche_aktualisierung": "2026-11-14T19:57:26+00:00"
  },
- "erstellt": "2026-11-13T21:26:39+00:00",
+ "erstellt": "2026-11-14T19:57:26+00:00",
  "gesamtstatus": "erfolgreich",
  "gueltig": true,
  "hinweis": "delta.json enthält nur Treffer der Quellen mit Status erfolgreich/teilweise. Quellen mit 'nicht erreichbar' wurden in diesem Lauf NICHT geprüft.",
- "delta_anzahl": 1,
+ "delta_anzahl": 0,
  "nacherfassung_tage": null,
  "plz_geodaten": {
   "status": "erfolgreich",
