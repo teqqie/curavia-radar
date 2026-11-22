@@ -1,5 +1,13 @@
 [
  {
+  "erstellt": "2026-11-22T21:05:39+00:00",
+  "gepruefte_quellen": [
+   "datenservice",
+   "ted"
+  ],
+  "eintraege": []
+ },
+ {
   "erstellt": "2026-11-21T20:55:49+00:00",
   "gepruefte_quellen": [
    "datenservice",
@@ -346,12 +354,5 @@
     "delta": "neu"
    }
   ]
- },
- {
-  "erstellt": "2026-11-08T19:44:40+00:00",
-  "gepruefte_quellen": [
-   "ted"
-  ],
-  "eintraege": []
  }
 ]
