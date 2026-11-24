@@ -1,52 +1,8 @@
 {
- "erstellt": "2026-11-24T02:16:28+00:00",
+ "erstellt": "2026-11-24T23:55:56+00:00",
  "gueltig": true,
  "gepruefte_quellen": [
-  "datenservice",
   "ted"
  ],
- "eintraege": [
-  {
-   "quelle": "TED",
-   "id": "TED-812723-2026",
-   "titel": "Veröffentlichung nach Artikel 7 Absatz 2 der Verordnung (EG) 1370/2007 vom 23.10.2007 über die beabsichtigte Einleitung eines Verhandlungsverfahrens ohne Aufruf zum Wettbewerb über die interimsweise Erbringung von Verkehrsleistungen im Teilnetz Dreieich für 2 Jahre.",
-   "auftraggeber": "Rhein-Main-Verkehrsverbund GmbH",
-   "art": "Vorinformation",
-   "verfahren": "pin-tran",
-   "nuts": [
-    "DE712",
-    "DE716",
-    "DE71C"
-   ],
-   "plz": [],
-   "orte": [
-    "Hofheim am Taunus"
-   ],
-   "region": "Frankfurt am Main, Darmstadt-Dieburg, Kreis Offenbach",
-   "prioritaet": 1,
-   "cpv": [
-    "60210000",
-    "60210000"
-   ],
-   "bereich": "Schiene",
-   "frist": "",
-   "frist_quelle": "",
-   "wert": null,
-   "lose": null,
-   "veroeffentlicht": "2026-11-23",
-   "link": "https://ted.europa.eu/de/notice/812723-2026/html",
-   "beschreibung": "",
-   "entfernung_km": 17,
-   "ort_genauigkeit": "Kreismitte (ungefähr)",
-   "frist_status": "unbekannt",
-   "key": "da691966e43fb33c",
-   "quellen": [
-    "TED"
-   ],
-   "weitere_ids": [
-    "TED-813451-2026"
-   ],
-   "delta": "neu"
-  }
- ]
+ "eintraege": []
 }

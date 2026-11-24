@@ -1,5 +1,12 @@
 [
  {
+  "erstellt": "2026-11-24T23:55:56+00:00",
+  "gepruefte_quellen": [
+   "ted"
+  ],
+  "eintraege": []
+ },
+ {
   "erstellt": "2026-11-24T02:16:28+00:00",
   "gepruefte_quellen": [
    "datenservice",
@@ -310,13 +317,5 @@
     "aenderung": "Frist geändert: 2026-12-07 → 2026-12-14"
    }
   ]
- },
- {
-  "erstellt": "2026-11-10T21:20:22+00:00",
-  "gepruefte_quellen": [
-   "datenservice",
-   "ted"
-  ],
-  "eintraege": []
  }
 ]
