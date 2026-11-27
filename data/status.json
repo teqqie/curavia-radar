@@ -2,28 +2,28 @@
  "datenservice": {
   "status": "erfolgreich",
   "geprueft_tage": [
-   "2026-11-25"
+   "2026-11-26"
   ],
   "fehlgeschlagen": [],
   "noch_nicht_verfuegbar": [],
   "nicht_verfuegbar_tage": [],
   "failed_days": [],
-  "last_ok_day": "2026-11-25",
-  "bekanntmachungen_gelesen": 1005,
+  "last_ok_day": "2026-11-26",
+  "bekanntmachungen_gelesen": 1141,
   "treffer": 0,
-  "lauf": "2026-11-26T23:53:24+00:00",
-  "letzte_erfolgreiche_aktualisierung": "2026-11-26T23:53:24+00:00"
+  "lauf": "2026-11-27T23:30:02+00:00",
+  "letzte_erfolgreiche_aktualisierung": "2026-11-27T23:30:02+00:00"
  },
  "ted": {
   "status": "erfolgreich",
-  "seit": "2026-11-23",
-  "bekanntmachungen_gelesen": 2,
-  "treffer": 2,
-  "last_ok_day": "2026-11-26",
-  "lauf": "2026-11-26T23:53:24+00:00",
-  "letzte_erfolgreiche_aktualisierung": "2026-11-26T23:53:24+00:00"
+  "seit": "2026-11-24",
+  "bekanntmachungen_gelesen": 0,
+  "treffer": 0,
+  "last_ok_day": "2026-11-27",
+  "lauf": "2026-11-27T23:30:02+00:00",
+  "letzte_erfolgreiche_aktualisierung": "2026-11-27T23:30:02+00:00"
  },
- "erstellt": "2026-11-26T23:53:24+00:00",
+ "erstellt": "2026-11-27T23:30:02+00:00",
  "gesamtstatus": "erfolgreich",
  "gueltig": true,
  "hinweis": "delta.json enthält nur Treffer der Quellen mit Status erfolgreich/teilweise. Quellen mit 'nicht erreichbar' wurden in diesem Lauf NICHT geprüft.",
